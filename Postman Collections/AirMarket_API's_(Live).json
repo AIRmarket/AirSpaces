@@ -714,7 +714,7 @@
         },
         {
           "_postman_id": "21d91d59-ffe3-7e39-55ea-c8331e9bcc27",
-          "name": "getClosestAirportList",
+          "name": "getClosestAirportList (For Calgary)",
           "event": [
             {
               "listen": "test",
@@ -767,7 +767,7 @@
               "mode": "raw",
               "raw": "{\n    \"latitude\"  : \"49.19472222222222\",\n    \"longitude\" : \"-123.18388888889\",\n    \"radius\"    : \"50000\"\n}"
             },
-            "description": "This API is returning the Airprots informaiton for Vacouver area.  Thi"
+            "description": "This API is returns the Airprots within the provided radius.  The parameters are set to query the calgary downtown area.  "
           }
         },
         {
