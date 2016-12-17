@@ -1,0 +1,1619 @@
+{
+  "info": {
+    "name": "AirMarket API's (Live)",
+    "_postman_id": "e9fb2fe0-129f-877e-b143-a21033a4350e",
+    "description": "",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "_postman_id": "0dd8f48b-001c-67d2-053c-579ee2e6ebec",
+      "name": "flightlog api (needs update)",
+      "description": "store and retrieve flight path info",
+      "item": [
+        {
+          "_postman_id": "3b37d753-7da0-130e-c4c7-c81a603c296b",
+          "name": "getLoadFlightLog",
+          "request": {
+            "url": "{{server_url}}/airwebservice/mobile/flightpathmobile/loadFlightPath",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "application/json, text/javascript, */*",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"flightname\"  : \"dirtytom_mission_flight_008\",\n    \"username\" : \"dirtytom\"\n}"
+            },
+            "description": ""
+          }
+        }
+      ]
+    },
+    {
+      "_postman_id": "3998612d-207a-479d-7355-6299ed286266",
+      "name": "4. AWS Gateway - Drone Zone API",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "82ca790e-0ae2-6670-35f8-02e5d100e40a",
+          "name": "upload airspace",
+          "request": {
+            "url": "{{server_url}}/{{sub_path}}droneZone/uploadAirSpace",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20160721T000211Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160721/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=79abf683deeb1f05185dbdcb98d381f9f2c381cec5bef3ad3002b004cf66b083",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "333",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"geojson\":\"{\\\"type\\\":\\\"MultiPolygon\\\",\\\"coordinates\\\":[[[[-111.35,57.01],[-112.06,57.08],[-110.55,57.06],[-111.35,57.01]]]]}\",\n    \"floor\":\"10\",\n    \"ceiling\":\"20\",\n    \"start\":\"2012-03-27 18:47:00\",\n    \"end\":\"2012-03-28 18:47:00\",\n    \"name\":\"202\",\n    \"proximityMsg\":\"hi\",\n    \"intersectionMsg\":\"hi\",\n    \"notam\":\"hi\"\n    \n}"
+            },
+            "description": "Get AirSpace\n"
+          }
+        },
+        {
+          "_postman_id": "a9358ca9-5d25-7f1c-bcab-9827b123199c",
+          "name": "query no drone zone list",
+          "request": {
+            "url": "{{server_url}}/{{sub_path}}droneZone/queryNoDroneZoneList",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20160721T000426Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160721/us-east-1/execute-api/aws4_request, SignedHeaders=content-type;host;x-amz-date, Signature=391e8a576f25e7a975c0f918336224c906d3456d6d188bf5109edb08c917a385",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "169",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata"
+            },
+            "description": ""
+          }
+        },
+        {
+          "_postman_id": "83714001-c0aa-553b-35a4-873e3630f0d0",
+          "name": "query drone zone",
+          "request": {
+            "url": "{{server_url}}/{{sub_path}}droneZone/queryNoDroneZone",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20160721T000116Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160721/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=63f9f91befa8a4e7e456112dd390a5cf3672eaf5970175b627a78b5ac820bd94",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "22",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\":\"test1\"\n}"
+            },
+            "description": ""
+          }
+        },
+        {
+          "_postman_id": "e93420b6-074a-40ee-b9dc-7a1ac1b69f6e",
+          "name": "query temporaryAirspaceList",
+          "request": {
+            "url": "{{server_url}}/{{sub_path}}droneZone/queryTemporaryAirspaceList",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20160721T000037Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160721/us-east-1/execute-api/aws4_request, SignedHeaders=content-type;host;x-amz-date, Signature=4b8b332af9d89a5b22d30af6d842bd945f18c32e762d659382bc331cf4bf0ee1",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "169",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata"
+            },
+            "description": ""
+          }
+        },
+        {
+          "_postman_id": "b48fc32a-90e7-eb8a-2f20-1ae77273ad2b",
+          "name": "terminate airspace",
+          "request": {
+            "url": "{{server_url}}/{{sub_path}}droneZone/terminateAirspace",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20160721T000000Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160721/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=0b2d23b5a1e27e4e6b39231ca1ce40141fffddc9cf3a4dfe11510bd59d75022a",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "13",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n   \"id\":1\n}"
+            },
+            "description": ""
+          }
+        },
+        {
+          "_postman_id": "bd6b7540-0e55-6b82-37df-2cdac80173d0",
+          "name": "registerDroneZone (upload no drone zone)",
+          "request": {
+            "url": "{{server_url}}/{{sub_path}}droneZone/registerDroneZone",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20160720T235829Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160720/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=d102522f17240c1c66755e65e84d44f0c402f17521c5a4c48fc1f2b7610a54a0",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "376",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"geojson\":\"{\\\"type\\\":\\\"MultiPolygon\\\",\\\"coordinates\\\":[[[[-111.35,57.01],[-112.06,57.08],[-110.55,57.06],[-111.35,57.01]]]]}\",\n    \"floor\":\"10\",\n    \"ceiling\":\"20\",\n    \"start\":\"2012-03-27 18:47:00\",\n    \"end\":\"2012-03-28 18:47:00\",\n    \"name\":\"202\",\n    \"desc\":\"test\",\n    \"proximityMsg\":\"hi\",\n    \"intersectionMsg\":\"hi\",\n    \"notam\":\"hi\",\n    \"flypermission\":\"false\"\n}"
+            },
+            "description": "Get AirSpace\n"
+          }
+        },
+        {
+          "_postman_id": "1e6de0f5-0e91-7c25-bd3e-1ab271800980",
+          "name": "query temporary airspace",
+          "request": {
+            "url": "{{server_url}}/{{sub_path}}droneZone/queryTemporaryAirspace",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20160720T235443Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160720/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=edafce76da8d6433897eafcb3c3fb8695301698315a5b7ba41fe1ead81fe10e0",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "17",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\":1080\n}"
+            },
+            "description": ""
+          }
+        },
+        {
+          "_postman_id": "fdd77249-2dc3-6368-3b6e-9b1f3c2ae731",
+          "name": "getDroneZoneInfo",
+          "request": {
+            "url": "{{server_url}}/{{sub_path}}droneZone/getDroneZoneInfo",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "application/json, text/javascript, */*",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20160721T164806Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160721/us-east-1/execute-api/aws4_request, SignedHeaders=accept;content-length;content-type;host;x-amz-date, Signature=69316dd6d207d68a95ea588e14bcd15d2c046174dd71358f78329af8315c3f6b",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "71",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"latitude\" : 54.6230,\n  \"longitude\" : -111.7968,\n  \"radius\":10000\n}"
+            },
+            "description": "\n"
+          }
+        },
+        {
+          "_postman_id": "688327e6-f726-c896-3c9a-172af359510a",
+          "name": "getDroneZoneInfo php",
+          "request": {
+            "url": "{{server_url}}/{{sub_path}}php_airspace_api/getDroneZoneInfo.php",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "application/json, text/javascript, */*",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20160721T164806Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160721/us-east-1/execute-api/aws4_request, SignedHeaders=accept;content-length;content-type;host;x-amz-date, Signature=69316dd6d207d68a95ea588e14bcd15d2c046174dd71358f78329af8315c3f6b",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "71",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"latitude\" : 54.6230,\n  \"longitude\" : -111.7968,\n  \"radius\":10000\n}"
+            },
+            "description": "\n"
+          }
+        },
+        {
+          "_postman_id": "aef0c836-7e1f-7013-1cf4-ca9f6f62a03f",
+          "name": "upload sfoc",
+          "request": {
+            "url": "{{server_url}}/{{sub_path}}droneZone/uploadsfoc",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "413",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20161025T220244Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20161025/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=34159780687f672f56d8ab99c7276ec80636ed9393f6692c7cc2abb242132a84",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"geojson\":\"{\\\"type\\\":\\\"MultiPolygon\\\",\\\"coordinates\\\":[[[[-111.35,57.01],[-112.06,57.08],[-110.55,57.06],[-111.35,57.01]]]]}\",\n    \"start_date\":\"2012-03-27 18:47:00\",\n    \"end_date\":\"2012-03-28 18:47:00\",\n    \"name\":\"202\",\n    \"classFpermission\":true,\n    \"classEpermission\":true,\n    \"classDpermission\":true,\n    \"classCpermission\":true,\n    \"classGpermission\":true,\n    \"notam\":\"hi\",\n    \"userid\":1\n    \n}"
+            },
+            "description": ""
+          }
+        },
+        {
+          "_postman_id": "7df0f90d-602e-2d02-286f-341d0220efa9",
+          "name": "query sfoc",
+          "request": {
+            "url": "{{server_url}}/{{sub_path}}droneZone/querysfoc",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "413",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20161025T220212Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20161025/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=47a23984f5bc64bd328ca592956838f13231d3cfa4fc762b1e6cf6a9d89e083f",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"geojson\":\"{\\\"type\\\":\\\"MultiPolygon\\\",\\\"coordinates\\\":[[[[-111.35,57.01],[-112.06,57.08],[-110.55,57.06],[-111.35,57.01]]]]}\",\n    \"start_date\":\"2012-03-27 18:47:00\",\n    \"end_date\":\"2012-03-28 18:47:00\",\n    \"name\":\"202\",\n    \"classFpermission\":true,\n    \"classEpermission\":true,\n    \"classDpermission\":true,\n    \"classCpermission\":true,\n    \"classGpermission\":true,\n    \"notam\":\"hi\",\n    \"userid\":1\n    \n}"
+            },
+            "description": ""
+          }
+        }
+      ]
+    },
+    {
+      "_postman_id": "6b8a5342-5fc1-744b-b54a-678f3ea4732c",
+      "name": "5. AWS Gateway - Status Report API",
+      "description": "This can now be removed",
+      "item": [
+        {
+          "_postman_id": "da87a0f0-6b70-c494-5e87-e91808eb17f1",
+          "name": "startMission",
+          "request": {
+            "url": "{{server_url}}/{{sub_path}}airwebservice/mobile/flightpathmobile/startMission",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20160720T235116Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160720/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=6e2d9800909ab2b2fb214fe1eff56a10247210a4eb8ac74bb33e1ccd154f06d5",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "161",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"droneserialnumber\" : \"mav_1234567_g_3\",\r\n    \"mission\" : \"mission_march_006\",\r\n    \"time\" : \"2016-02-20T12:45:25.291PST\",\r\n    \"username\" : \"Joe Test\"\r\n}"
+            },
+            "description": ""
+          }
+        },
+        {
+          "_postman_id": "b8d709f3-9141-2019-e1ec-2ac138192150",
+          "name": "stopMission",
+          "request": {
+            "url": "{{server_url}}/{{sub_path}}airwebservice/mobile/flightpathmobile/stopMission",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20160720T235150Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160720/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=68328b130c229708beffa66980495bf1c68edf7002bcada9d371594a3e80a495",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "169",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"time\" : \"Mon, 04 Jan 2016 14:45:01 GMT\",\n  \"username\" : \"joe_test\", \n  \"mission\" : \"mission_march_006\",\n  \"droneserialnumber\" : \"serial_number_x12345_test\"\n    \n}\n\n"
+            },
+            "description": ""
+          }
+        },
+        {
+          "_postman_id": "765c93b9-fb1d-1833-27af-d06b38254f2b",
+          "name": "processPoint",
+          "request": {
+            "url": "{{server_url}}/{{sub_path}}airwebservice/mobile/flightpathmobile/processPoint",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20160720T235740Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160720/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=1469214b58e3ae6d0dfeec231f490d35115f8822b8a00ff59c80162604694c67",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "247",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"time\" : \"Mon, 04 Jan 2016 14:35:01 GMT\",\n  \"username\" : \"joe_test\", \n  \"mission\" : \"mission_new_test_011\",\n  \"latitude\" : \"49.249647\",\n  \"longitude\" : \"-123.083223\",\n  \"altitude\" : \"20.0\",\n  \"droneserialnumber\" : \"serial_number_x12345_test\"\n}"
+            },
+            "description": "process a mission point"
+          }
+        }
+      ]
+    },
+    {
+      "_postman_id": "98920f59-72cd-11e2-508c-527570c6e822",
+      "name": "2. AWS Gateway - User Airspace Info",
+      "description": "API's that provide user based information about Airspaces or geospacial info: SFOC's, IFR, Jurisdictions, etc",
+      "item": [
+        {
+          "_postman_id": "698fc225-31ac-5c26-e792-990db1530c10",
+          "name": "Build AAAA Report",
+          "request": {
+            "url": "https://f55ewthd79.execute-api.us-west-2.amazonaws.com/test/reports",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "f55ewthd79.execute-api.us-west-2.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20160520T193413Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160520/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=49fcab9c5fce3d107d516e21ac7c2d170b5ef1355e338fd24a186745a6ead1cc",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "60",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"flightName\": \"Ottawa6h_66\",\n    \"flightFlag\": false\n}"
+            },
+            "description": "Create the AirMarket Approved Aerial Assets report. "
+          }
+        }
+      ]
+    },
+    {
+      "_postman_id": "af3f9c7e-3af6-774a-a7bb-90d694d4fc26",
+      "name": "3. AWS Gateway - Air Space API",
+      "description": "This can now be removed",
+      "item": [
+        {
+          "_postman_id": "2fb7f63a-5bd1-5b55-bd0f-210b5093987f",
+          "name": "assessUserLocation",
+          "request": {
+            "url": "{{server_url}}/{{sub_path}}airwebservice/mobile/flightpathmobile/assessUserLocation",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20160804T235515Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160804/us-west-2/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=85b07897d1cec5faf9c3d63ec46be966b8aad269c63886ab8edcafd0c459caa0",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "261",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"time\" : \"Mon, 04 Jan 2016 14:35:01 GMT\",\n  \"username\" : \"joe_test\", \n  \"mission\" : \"mission_march_006\",\n  \"latitude\" : \"49.249647\",\n  \"longitude\" : \"-123.083223\",\n  \"altitude\" : \"20.0\",\n  \"droneserialnumber\" : \"serial_number_x12345_test\",\n  \"sfoc\":\"true\"\n}"
+            },
+            "description": ""
+          }
+        },
+        {
+          "_postman_id": "21d91d59-ffe3-7e39-55ea-c8331e9bcc27",
+          "name": "getClosestAirportList",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "postman.setGlobalVariable(\"flightPathMobileUrl\", \"dev.airmarket.io/leaflet/airwebservice/mobile/flightpathmobile\");",
+                  "",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{server_url}}/{{sub_path}}airwebservice/mobile/flightpathmobile/getClosestAirportList",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "application/json, text/javascript, */*",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20160720T232752Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160720/us-east-1/execute-api/aws4_request, SignedHeaders=accept;content-length;content-type;host;x-amz-date, Signature=9b13e8403742b3b00aa04916798dbd19418d0a152008814e1004f02835639430",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "106",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"latitude\"  : \"49.19472222222222\",\n    \"longitude\" : \"-123.18388888889\",\n    \"radius\"    : \"50000\"\n}"
+            },
+            "description": "This API is returning the Airprots informaiton for Vacouver area.  Thi"
+          }
+        },
+        {
+          "_postman_id": "8b6ed90b-d593-bb4f-499d-9faaa30ff84b",
+          "name": "getAirSpaceInfo  (Class C for Calgary)",
+          "request": {
+            "url": "{{server_url}}/{{sub_path}}airwebservice/mobile/flightpathmobile/getAirSpaceInfo",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "application/json, text/javascript, */*",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20160720T232316Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160720/us-east-1/execute-api/aws4_request, SignedHeaders=accept;content-length;content-type;host;x-amz-date, Signature=fd6b7c599d2c2326febcde5c0065f44af4055b54abd7b27eb6005c9fd540b727",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "151",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"latitude\"  : \"51.069917\",\n    \"longitude\" : \"-114.023059\",\n    \"altitude\"  : \"700\",\n    \"radius\"    : \"300\",\n    \"class\"     : \"C\"\n}"
+            },
+            "description": "Get AirSpace Information used in the AirMarket mobile apps."
+          }
+        },
+        {
+          "_postman_id": "bc44e180-85bf-d5c3-69a6-c56856485644",
+          "name": "firRegion",
+          "request": {
+            "url": "{{server_url}}/{{sub_path}}airwebservice/mobile/flightpathmobile/firRegion",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20160703T152148Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160703/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=1516ec388c4c017f55c8a870a556d04b0e2a7c8051704ad0c616b91809a1fb23",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "79",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"latitude\"  : \"43.19472222222222\",\n    \"longitude\" : \"-79.18388888889\"\n}"
+            },
+            "description": ""
+          }
+        }
+      ]
+    },
+    {
+      "_postman_id": "db088715-e8cf-a96e-6d86-033ee8a44a25",
+      "name": "Drone Zone (Internal, needs update) API",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "a878db7a-8542-47f3-1b39-d04495716906",
+          "name": "query temporary airspace",
+          "request": {
+            "url": "{{server_url}}/php_airspace_api/query_temporaryAirspace.php",
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\":1080\n}"
+            },
+            "description": ""
+          }
+        },
+        {
+          "_postman_id": "b137f64e-0b93-c231-5334-fbe2ab38a379",
+          "name": "registerDroneZone (upload no drone zone)",
+          "request": {
+            "url": "{{server_url}}/php_airspace_api/update_nodronezone.php",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "application/json, text/javascript, */*",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"geojson\":\"{\\\"type\\\":\\\"MultiPolygon\\\",\\\"coordinates\\\":[[[[-111.35,57.01],[-112.06,57.08],[-110.55,57.06],[-111.35,57.01]]]]}\",\n    \"floor\":\"10\",\n    \"ceiling\":\"20\",\n    \"start\":\"2012-03-27 18:47:00\",\n    \"end\":\"2012-03-28 18:47:00\",\n    \"name\":\"202\",\n    \"desc\":\"test\",\n    \"proximityMsg\":\"hi\",\n    \"intersectionMsg\":\"hi\",\n    \"notam\":\"hi\",\n    \"flypermission\":\"false\"\n}"
+            },
+            "description": "Get AirSpace\n"
+          }
+        },
+        {
+          "_postman_id": "d645bf8e-a7c5-fdac-849a-589e6d1a2939",
+          "name": "upload airspace",
+          "request": {
+            "url": "{{server_url}}/php_airspace_api/update_airspace.php",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "application/json, text/javascript, */*",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"geojson\":\"{\\\"type\\\":\\\"MultiPolygon\\\",\\\"coordinates\\\":[[[[-111.35,57.01],[-112.06,57.08],[-110.55,57.06],[-111.35,57.01]]]]}\",\n    \"floor\":\"10\",\n    \"ceiling\":\"20\",\n    \"start\":\"2012-03-27 18:47:00\",\n    \"end\":\"2012-03-28 18:47:00\",\n    \"name\":\"202\",\n    \"desc\":\"test\",\n    \"proximityMsg\":\"hi\",\n    \"intersectionMsg\":\"hi\",\n    \"notam\":\"hi\",\n    \"radius\":10\n}"
+            },
+            "description": "Get AirSpace\n"
+          }
+        },
+        {
+          "_postman_id": "afb5313a-b689-7187-5b7b-0b37aba29dae",
+          "name": "terminate airspace",
+          "request": {
+            "url": "{{server_url}}/php_airspace_api/turnoffAirspace.php",
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "description": ""
+          }
+        },
+        {
+          "_postman_id": "1b8a82d7-90e4-4665-3d60-22b9a4f0afd5",
+          "name": "query_temporaryAirspaceList.php",
+          "request": {
+            "url": "{{server_url}}/php_airspace_api/query_temporaryAirspaceList.php",
+            "method": "GET",
+            "body": {
+              "mode": "formdata"
+            },
+            "description": ""
+          }
+        },
+        {
+          "_postman_id": "10879127-7e31-069f-719e-40df91b0a043",
+          "name": "query_nodronezone.php",
+          "request": {
+            "url": "{{server_url}}/php_airspace_api/query_nodronezone.php",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\":\"test1\"\n}"
+            },
+            "description": ""
+          }
+        },
+        {
+          "_postman_id": "20783194-f12a-dd0c-40cf-06467b73422f",
+          "name": "query no drone zone list",
+          "request": {
+            "url": "{{server_url}}/php_airspace_api/query_nodronezoneList.php",
+            "method": "GET",
+            "body": {
+              "mode": "formdata"
+            },
+            "description": ""
+          }
+        }
+      ]
+    },
+    {
+      "_postman_id": "f89361da-ea1e-fe97-206d-647e3a221577",
+      "name": "1. AWS Gateway (deprecated)",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "74d7e6a7-29d2-9215-ee2e-c45e60462200",
+          "name": "getClosestAirportList",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "postman.setGlobalVariable(\"flightPathMobileUrl\", \"dev.airmarket.io/leaflet/airwebservice/mobile/flightpathmobile\");",
+                  "",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "{{airmarket_aws_dev}}/airwebservice/mobile/flightpathmobile/getClosestAirportList",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "application/json, text/javascript, */*",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20160607T160608Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160607/us-west-2/execute-api/aws4_request, SignedHeaders=accept;content-length;content-type;host;x-amz-date, Signature=ca25cdd8f267823ffa9d27bc1c75b78486c1961efd9face1c51364fbcb89b2c8",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "77p8ubq4lc.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "106",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata"
+            },
+            "description": "Get AirSpace\n"
+          },
+          "response": [
+            {
+              "id": "5b580525-2436-eb9f-4392-da16462d2ae7",
+              "name": "reponse",
+              "originalRequest": {
+                "url": "{{airmarket_aws_dev}}/airwebservice/mobile/flightpathmobile/getClosestAirportList",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json, text/javascript, */*",
+                    "description": ""
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "20160607T160608Z",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160607/us-west-2/execute-api/aws4_request, SignedHeaders=accept;content-length;content-type;host;x-amz-date, Signature=ca25cdd8f267823ffa9d27bc1c75b78486c1961efd9face1c51364fbcb89b2c8",
+                    "description": ""
+                  },
+                  {
+                    "key": "Host",
+                    "value": "77p8ubq4lc.execute-api.us-east-1.amazonaws.com",
+                    "description": ""
+                  },
+                  {
+                    "key": "Content-Length",
+                    "value": "106",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "formdata"
+                },
+                "description": "Get AirSpace\n"
+              },
+              "status": "OK",
+              "code": "200",
+              "_postman_previewlanguage": "javascript",
+              "_postman_previewtype": "html",
+              "header": [
+                {
+                  "name": "Access-Control-Allow-Origin",
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*",
+                  "description": ""
+                },
+                {
+                  "name": "Connection",
+                  "key": "Connection",
+                  "value": "close",
+                  "description": ""
+                },
+                {
+                  "name": "Content-Type",
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "description": ""
+                },
+                {
+                  "name": "Date",
+                  "key": "Date",
+                  "value": "Sun, 06 Mar 2016 22:18:21 GMT",
+                  "description": ""
+                },
+                {
+                  "name": "Server",
+                  "key": "Server",
+                  "value": "Apache/2.4.18 (Unix) OpenSSL/1.0.1e-fips mod_bwlimited/1.4",
+                  "description": ""
+                },
+                {
+                  "name": "Transfer-Encoding",
+                  "key": "Transfer-Encoding",
+                  "value": "chunked",
+                  "description": ""
+                },
+                {
+                  "name": "X-Powered-By",
+                  "key": "X-Powered-By",
+                  "value": "PHP/5.5.32",
+                  "description": ""
+                }
+              ],
+              "responseTime": "542",
+              "body": "{\"result\":\"success\",\"airport\":[{\"lat\":\"49.194721999999999\",\"long\":\"-123.183888999999990\",\"type\":\"Land\",\"ident\":\"CYVR\",\"station\":\"VANCOUVER INTL\",\"class\":\"C\",\"control\":\"controlled\",\"size\":\"SHAPE IRREGULAR TO 2500\",\"notam\":\"CYVR\",\"twr\":\"118.7 (South) 119.55 (North) VFR 124.0 125.65 226.5 236.6 (E) (emerg 604-775-9531)\",\"mf\":null,\"dis\":0.027626532966462,\"direct\":\"206.564821810279\"},{\"lat\":\"49.183332999999998\",\"long\":\"-123.166667000000000\",\"type\":\"Water\",\"ident\":\"CAM9\",\"station\":\"VANCOUVER INTL\",\"class\":\"C\",\"control\":\"controlled\",\"size\":\"SHAPE IRREGULAR TO 2500\",\"notam\":\"CYVR\",\"twr\":\"118.7 (South) 119.55 (North) VFR 124.0 125.65 226.5 236.6 (E) (emerg 604-775-9531)\",\"mf\":null,\"dis\":2295.8654254692,\"direct\":\"123.477560066473\"},{\"lat\":\"49.243889000000003\",\"long\":\"-123.127222000000000\",\"type\":\"Heli\",\"ident\":\"CAK7\",\"station\":\"VANCOUVER (CHILDREN & WOMEN'S HEALTH CENTRE) (Heli)\",\"class\":\"G\",\"control\":\"uncontrolled\",\"size\":null,\"notam\":\"CYVR\",\"twr\":\"Vancouver Harbour 118.4 15-02Z? or til 1\\/2 hr after SS, whichever is later O\\/T Vancouver 124.0 Vancouver Harbour CZ shape irregular 2500 ASL\",\"mf\":null,\"dis\":8342.2158906557,\"direct\":\"49.0536013601574\"},{\"lat\":\"49.261944000000000\",\"long\":\"-123.124444000000000\",\"type\":\"Heli\",\"ident\":\"CBK4\",\"station\":\"VANCOUVER (GEN HOSP) (Heli)\",\"class\":\"G\",\"control\":\"uncontrolled\",\"size\":null,\"notam\":\"CYVR\",\"twr\":\"Vancouver Harbour 118.4 15-02Z? or til 1\\/2 hr after SS, whichever is later, O\\/T tfc Vancouver Harbour CZ shape irregular 2500 ASL.\",\"mf\":null,\"dis\":9978.1290431502,\"direct\":\"41.486650305454\"},{\"lat\":\"49.286943999999998\",\"long\":\"-123.106111000000000\",\"type\":\"Heli\",\"ident\":\"CBC7\",\"station\":\"VANCOUVER\\/HARBOUR (PUBLIC) (Heli)\",\"class\":\"G\",\"control\":\"uncontrolled\",\"size\":null,\"notam\":\"CYVR\",\"twr\":\"Vancouver Harbour 118.4 15-02Z? or til 1\\/2 hr after SS, whichever is later. (emerg only 604-688-9254)\",\"mf\":null,\"dis\":13414.663324395,\"direct\":\"40.1435724886672\"},{\"lat\":\"49.294443999999999\",\"long\":\"-123.111389000000000\",\"type\":\"Water\",\"ident\":\"CYHC\",\"station\":\"VANCOUVER HARBOUR\",\"class\":\"C\",\"control\":\"controlled\",\"size\":\"SHAPE IRREGULAR TO 2500\",\"notam\":\"CYVR\",\"twr\":\"Vancouver Harbour 118.4 15-02Z? or til half hour after SS, whichever is later. (emerg only 604-688-9254)\",\"mf\":null,\"dis\":13709.325518865,\"direct\":\"36.0179623054774\"},{\"lat\":\"49.119999999999997\",\"long\":\"-123.045833000000000\",\"type\":\"Heli\",\"ident\":\"CBD2\",\"station\":\"VANCOUVER\\/DELTA (NORTH) (Heli)\",\"class\":\"G\",\"control\":\"uncontrolled\",\"size\":null,\"notam\":\"CYVR\",\"twr\":\"Boundary Bay 118.1 15-07Z? call prior to dep; Vancouver 124.0\",\"mf\":null,\"dis\":17455.41335225,\"direct\":\"118.424298337944\"},{\"lat\":\"49.129167000000002\",\"long\":\"-123.018333000000000\",\"type\":\"Heli\",\"ident\":\"CSE7\",\"station\":\"VANCOUVER\\/DELTA (SEI) (Heli)\",\"class\":\"G\",\"control\":\"uncontrolled\",\"size\":null,\"notam\":\"CYVR\",\"twr\":\"Boundary Bay 118.1 15-07Z? call prior to dep; Vancouver 124.0\",\"mf\":null,\"dis\":19799.632806284,\"direct\":\"111.60209687154\"},{\"lat\":\"49.074167000000003\",\"long\":\"-123.007499999999990\",\"type\":\"Land\",\"ident\":\"CZBB\",\"station\":\"VANCOUVER\\/BOUNDARY BAY\",\"class\":\"C\",\"control\":\"controlled\",\"size\":\"SHAPE IRREGULAR TO 2500\",\"notam\":\"CYVR\",\"twr\":\"118.1 (inner) 127.6 (outer) (V) to 2000 ASL 15-07Z? (emerg only 604-946-0911) Vancouver TML 125.2 abv 2000 ASL\",\"mf\":\"tfc 118.1 to 2000 ASL 07-15Z? Vancouver TML 125.2 abv 2000 ASL. CZ shape irregular to 2500 ASL. (CAR 602.98) Excluding that portion which penetrates Delta Heritage Air Park ATF dur daylight hrs.\",\"dis\":23756.857553629,\"direct\":\"124.351148994861\"},{\"lat\":\"49.254722000000001\",\"long\":\"-122.935278000000000\",\"type\":\"Heli\",\"ident\":\"CGL6\",\"station\":\"VANCOUVER\\/BURNABY (GLOBAL BC) (Heli)\",\"class\":\"G\",\"control\":\"uncontrolled\",\"size\":null,\"notam\":\"CYVR\",\"twr\":\"Vancouver 124.0\",\"mf\":null,\"dis\":28437.9336442,\"direct\":\"76.4316883165501\"},{\"lat\":\"49.078611000000002\",\"long\":\"-122.938056000000000\",\"type\":\"Land\",\"ident\":\"CAK3\",\"station\":\"DELTA\\/DELTA HERITAGE AIR PARK\",\"class\":\"C\",\"control\":\"controlled\",\"size\":\"SHAPE IRREGULAR 1000 TO 2500\",\"notam\":\"CYVR\",\"twr\":null,\"mf\":null,\"dis\":30231.02660269,\"direct\":\"115.282194623427\"},{\"lat\":\"49.226388999999998\",\"long\":\"-122.890278000000000\",\"type\":\"Heli\",\"ident\":\"CNW9\",\"station\":\"VANCOUVER\\/NEW WESTMINSTER (ROYAL COLUMBIAN HOSP) (Heli)\",\"class\":\"G\",\"control\":\"uncontrolled\",\"size\":null,\"notam\":\"CYVR\",\"twr\":\"Vancouver Outer 124.0\",\"mf\":null,\"dis\":32837.361741346,\"direct\":\"83.844280278776\"},{\"lat\":\"49.175832999999997\",\"long\":\"-122.843889000000000\",\"type\":\"Heli\",\"ident\":\"CVS3\",\"station\":\"VANCOUVER (SURREY MEMORIAL HOSP) (Heli)\",\"class\":\"G\",\"control\":\"uncontrolled\",\"size\":null,\"notam\":\"CYVR\",\"twr\":null,\"mf\":null,\"dis\":37864.545018156,\"direct\":\"93.1798871563918\"},{\"lat\":\"48.846666999999997\",\"long\":\"-123.284167000000000\",\"type\":\"Heli\",\"ident\":\"CBF5\",\"station\":\"MAYNE ISLAND (MEDICAL EMERGENCY) (Heli)\",\"class\":\"G\",\"control\":\"uncontrolled\",\"size\":null,\"notam\":\"CYYJ\",\"twr\":null,\"mf\":null,\"dis\":40276.210566966,\"direct\":\"196.072208179206\"},{\"lat\":\"49.093333000000001\",\"long\":\"-122.822778000000000\",\"type\":\"Land\",\"ident\":\"CSK8\",\"station\":\"SURREY\\/KING GEORGE AIRPARK\",\"class\":\"G\",\"control\":\"uncontrolled\",\"size\":null,\"notam\":\"CYVR\",\"twr\":null,\"mf\":null,\"dis\":41706.357117806,\"direct\":\"105.683165996411\"},{\"lat\":\"48.896388999999999\",\"long\":\"-123.418333000000000\",\"type\":\"Heli\",\"ident\":\"CBK9\",\"station\":\"LITTLE PARKER ISLAND (Heli)\",\"class\":\"G\",\"control\":\"uncontrolled\",\"size\":null,\"notam\":\"CYCD\",\"twr\":null,\"mf\":null,\"dis\":42190.616614061,\"direct\":\"218.161909201512\"},{\"lat\":\"49.291666999999997\",\"long\":\"-122.792222000000000\",\"type\":\"Heli\",\"ident\":\"CFR6\",\"station\":\"VANCOUVER\\/COQUITLAM FIRE & RESCUE (Heli)\",\"class\":\"G\",\"control\":\"uncontrolled\",\"size\":null,\"notam\":\"CYVR\",\"twr\":null,\"mf\":null,\"dis\":44865.614949718,\"direct\":\"76.097653623627\"},{\"lat\":\"48.750000000000000\",\"long\":\"-123.233333000000000\",\"type\":\"Water\",\"ident\":\"CAB3\",\"station\":\"BEDWELL HARBOUR\",\"class\":\"G\",\"control\":\"uncontrolled\",\"size\":null,\"notam\":\"CYYJ\",\"twr\":\"Victoria 14-08Z? O\\/T tfc 119.1 abv 1200 ASL\",\"mf\":null,\"dis\":49755.522289369,\"direct\":\"186.344077191006\"}]}"
+            },
+            {
+              "id": "c72da826-5da2-50b4-84d3-4035eee7f5bc",
+              "name": "reponse",
+              "originalRequest": {
+                "url": "{{airmarket_aws_dev}}/airwebservice/mobile/flightpathmobile/getClosestAirportList",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json, text/javascript, */*",
+                    "description": ""
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "20160607T160608Z",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160607/us-west-2/execute-api/aws4_request, SignedHeaders=accept;content-length;content-type;host;x-amz-date, Signature=ca25cdd8f267823ffa9d27bc1c75b78486c1961efd9face1c51364fbcb89b2c8",
+                    "description": ""
+                  },
+                  {
+                    "key": "Host",
+                    "value": "77p8ubq4lc.execute-api.us-east-1.amazonaws.com",
+                    "description": ""
+                  },
+                  {
+                    "key": "Content-Length",
+                    "value": "106",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "formdata"
+                },
+                "description": "Get AirSpace\n"
+              },
+              "status": "OK",
+              "code": "200",
+              "_postman_previewlanguage": "javascript",
+              "_postman_previewtype": "html",
+              "header": [
+                {
+                  "name": "Access-Control-Allow-Origin",
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*",
+                  "description": ""
+                },
+                {
+                  "name": "Connection",
+                  "key": "Connection",
+                  "value": "close",
+                  "description": ""
+                },
+                {
+                  "name": "Content-Type",
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "description": ""
+                },
+                {
+                  "name": "Date",
+                  "key": "Date",
+                  "value": "Sun, 06 Mar 2016 22:18:21 GMT",
+                  "description": ""
+                },
+                {
+                  "name": "Server",
+                  "key": "Server",
+                  "value": "Apache/2.4.18 (Unix) OpenSSL/1.0.1e-fips mod_bwlimited/1.4",
+                  "description": ""
+                },
+                {
+                  "name": "Transfer-Encoding",
+                  "key": "Transfer-Encoding",
+                  "value": "chunked",
+                  "description": ""
+                },
+                {
+                  "name": "X-Powered-By",
+                  "key": "X-Powered-By",
+                  "value": "PHP/5.5.32",
+                  "description": ""
+                }
+              ],
+              "responseTime": "542",
+              "body": "{\"result\":\"success\",\"airport\":[{\"lat\":\"49.194721999999999\",\"long\":\"-123.183888999999990\",\"type\":\"Land\",\"ident\":\"CYVR\",\"station\":\"VANCOUVER INTL\",\"class\":\"C\",\"control\":\"controlled\",\"size\":\"SHAPE IRREGULAR TO 2500\",\"notam\":\"CYVR\",\"twr\":\"118.7 (South) 119.55 (North) VFR 124.0 125.65 226.5 236.6 (E) (emerg 604-775-9531)\",\"mf\":null,\"dis\":0.027626532966462,\"direct\":\"206.564821810279\"},{\"lat\":\"49.183332999999998\",\"long\":\"-123.166667000000000\",\"type\":\"Water\",\"ident\":\"CAM9\",\"station\":\"VANCOUVER INTL\",\"class\":\"C\",\"control\":\"controlled\",\"size\":\"SHAPE IRREGULAR TO 2500\",\"notam\":\"CYVR\",\"twr\":\"118.7 (South) 119.55 (North) VFR 124.0 125.65 226.5 236.6 (E) (emerg 604-775-9531)\",\"mf\":null,\"dis\":2295.8654254692,\"direct\":\"123.477560066473\"},{\"lat\":\"49.243889000000003\",\"long\":\"-123.127222000000000\",\"type\":\"Heli\",\"ident\":\"CAK7\",\"station\":\"VANCOUVER (CHILDREN & WOMEN'S HEALTH CENTRE) (Heli)\",\"class\":\"G\",\"control\":\"uncontrolled\",\"size\":null,\"notam\":\"CYVR\",\"twr\":\"Vancouver Harbour 118.4 15-02Z? or til 1\\/2 hr after SS, whichever is later O\\/T Vancouver 124.0 Vancouver Harbour CZ shape irregular 2500 ASL\",\"mf\":null,\"dis\":8342.2158906557,\"direct\":\"49.0536013601574\"},{\"lat\":\"49.261944000000000\",\"long\":\"-123.124444000000000\",\"type\":\"Heli\",\"ident\":\"CBK4\",\"station\":\"VANCOUVER (GEN HOSP) (Heli)\",\"class\":\"G\",\"control\":\"uncontrolled\",\"size\":null,\"notam\":\"CYVR\",\"twr\":\"Vancouver Harbour 118.4 15-02Z? or til 1\\/2 hr after SS, whichever is later, O\\/T tfc Vancouver Harbour CZ shape irregular 2500 ASL.\",\"mf\":null,\"dis\":9978.1290431502,\"direct\":\"41.486650305454\"},{\"lat\":\"49.286943999999998\",\"long\":\"-123.106111000000000\",\"type\":\"Heli\",\"ident\":\"CBC7\",\"station\":\"VANCOUVER\\/HARBOUR (PUBLIC) (Heli)\",\"class\":\"G\",\"control\":\"uncontrolled\",\"size\":null,\"notam\":\"CYVR\",\"twr\":\"Vancouver Harbour 118.4 15-02Z? or til 1\\/2 hr after SS, whichever is later. (emerg only 604-688-9254)\",\"mf\":null,\"dis\":13414.663324395,\"direct\":\"40.1435724886672\"},{\"lat\":\"49.294443999999999\",\"long\":\"-123.111389000000000\",\"type\":\"Water\",\"ident\":\"CYHC\",\"station\":\"VANCOUVER HARBOUR\",\"class\":\"C\",\"control\":\"controlled\",\"size\":\"SHAPE IRREGULAR TO 2500\",\"notam\":\"CYVR\",\"twr\":\"Vancouver Harbour 118.4 15-02Z? or til half hour after SS, whichever is later. (emerg only 604-688-9254)\",\"mf\":null,\"dis\":13709.325518865,\"direct\":\"36.0179623054774\"},{\"lat\":\"49.119999999999997\",\"long\":\"-123.045833000000000\",\"type\":\"Heli\",\"ident\":\"CBD2\",\"station\":\"VANCOUVER\\/DELTA (NORTH) (Heli)\",\"class\":\"G\",\"control\":\"uncontrolled\",\"size\":null,\"notam\":\"CYVR\",\"twr\":\"Boundary Bay 118.1 15-07Z? call prior to dep; Vancouver 124.0\",\"mf\":null,\"dis\":17455.41335225,\"direct\":\"118.424298337944\"},{\"lat\":\"49.129167000000002\",\"long\":\"-123.018333000000000\",\"type\":\"Heli\",\"ident\":\"CSE7\",\"station\":\"VANCOUVER\\/DELTA (SEI) (Heli)\",\"class\":\"G\",\"control\":\"uncontrolled\",\"size\":null,\"notam\":\"CYVR\",\"twr\":\"Boundary Bay 118.1 15-07Z? call prior to dep; Vancouver 124.0\",\"mf\":null,\"dis\":19799.632806284,\"direct\":\"111.60209687154\"},{\"lat\":\"49.074167000000003\",\"long\":\"-123.007499999999990\",\"type\":\"Land\",\"ident\":\"CZBB\",\"station\":\"VANCOUVER\\/BOUNDARY BAY\",\"class\":\"C\",\"control\":\"controlled\",\"size\":\"SHAPE IRREGULAR TO 2500\",\"notam\":\"CYVR\",\"twr\":\"118.1 (inner) 127.6 (outer) (V) to 2000 ASL 15-07Z? (emerg only 604-946-0911) Vancouver TML 125.2 abv 2000 ASL\",\"mf\":\"tfc 118.1 to 2000 ASL 07-15Z? Vancouver TML 125.2 abv 2000 ASL. CZ shape irregular to 2500 ASL. (CAR 602.98) Excluding that portion which penetrates Delta Heritage Air Park ATF dur daylight hrs.\",\"dis\":23756.857553629,\"direct\":\"124.351148994861\"},{\"lat\":\"49.254722000000001\",\"long\":\"-122.935278000000000\",\"type\":\"Heli\",\"ident\":\"CGL6\",\"station\":\"VANCOUVER\\/BURNABY (GLOBAL BC) (Heli)\",\"class\":\"G\",\"control\":\"uncontrolled\",\"size\":null,\"notam\":\"CYVR\",\"twr\":\"Vancouver 124.0\",\"mf\":null,\"dis\":28437.9336442,\"direct\":\"76.4316883165501\"},{\"lat\":\"49.078611000000002\",\"long\":\"-122.938056000000000\",\"type\":\"Land\",\"ident\":\"CAK3\",\"station\":\"DELTA\\/DELTA HERITAGE AIR PARK\",\"class\":\"C\",\"control\":\"controlled\",\"size\":\"SHAPE IRREGULAR 1000 TO 2500\",\"notam\":\"CYVR\",\"twr\":null,\"mf\":null,\"dis\":30231.02660269,\"direct\":\"115.282194623427\"},{\"lat\":\"49.226388999999998\",\"long\":\"-122.890278000000000\",\"type\":\"Heli\",\"ident\":\"CNW9\",\"station\":\"VANCOUVER\\/NEW WESTMINSTER (ROYAL COLUMBIAN HOSP) (Heli)\",\"class\":\"G\",\"control\":\"uncontrolled\",\"size\":null,\"notam\":\"CYVR\",\"twr\":\"Vancouver Outer 124.0\",\"mf\":null,\"dis\":32837.361741346,\"direct\":\"83.844280278776\"},{\"lat\":\"49.175832999999997\",\"long\":\"-122.843889000000000\",\"type\":\"Heli\",\"ident\":\"CVS3\",\"station\":\"VANCOUVER (SURREY MEMORIAL HOSP) (Heli)\",\"class\":\"G\",\"control\":\"uncontrolled\",\"size\":null,\"notam\":\"CYVR\",\"twr\":null,\"mf\":null,\"dis\":37864.545018156,\"direct\":\"93.1798871563918\"},{\"lat\":\"48.846666999999997\",\"long\":\"-123.284167000000000\",\"type\":\"Heli\",\"ident\":\"CBF5\",\"station\":\"MAYNE ISLAND (MEDICAL EMERGENCY) (Heli)\",\"class\":\"G\",\"control\":\"uncontrolled\",\"size\":null,\"notam\":\"CYYJ\",\"twr\":null,\"mf\":null,\"dis\":40276.210566966,\"direct\":\"196.072208179206\"},{\"lat\":\"49.093333000000001\",\"long\":\"-122.822778000000000\",\"type\":\"Land\",\"ident\":\"CSK8\",\"station\":\"SURREY\\/KING GEORGE AIRPARK\",\"class\":\"G\",\"control\":\"uncontrolled\",\"size\":null,\"notam\":\"CYVR\",\"twr\":null,\"mf\":null,\"dis\":41706.357117806,\"direct\":\"105.683165996411\"},{\"lat\":\"48.896388999999999\",\"long\":\"-123.418333000000000\",\"type\":\"Heli\",\"ident\":\"CBK9\",\"station\":\"LITTLE PARKER ISLAND (Heli)\",\"class\":\"G\",\"control\":\"uncontrolled\",\"size\":null,\"notam\":\"CYCD\",\"twr\":null,\"mf\":null,\"dis\":42190.616614061,\"direct\":\"218.161909201512\"},{\"lat\":\"49.291666999999997\",\"long\":\"-122.792222000000000\",\"type\":\"Heli\",\"ident\":\"CFR6\",\"station\":\"VANCOUVER\\/COQUITLAM FIRE & RESCUE (Heli)\",\"class\":\"G\",\"control\":\"uncontrolled\",\"size\":null,\"notam\":\"CYVR\",\"twr\":null,\"mf\":null,\"dis\":44865.614949718,\"direct\":\"76.097653623627\"},{\"lat\":\"48.750000000000000\",\"long\":\"-123.233333000000000\",\"type\":\"Water\",\"ident\":\"CAB3\",\"station\":\"BEDWELL HARBOUR\",\"class\":\"G\",\"control\":\"uncontrolled\",\"size\":null,\"notam\":\"CYYJ\",\"twr\":\"Victoria 14-08Z? O\\/T tfc 119.1 abv 1200 ASL\",\"mf\":null,\"dis\":49755.522289369,\"direct\":\"186.344077191006\"}]}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "480f9419-d10b-b8d9-be1f-8ea6f5120251",
+          "name": "getAirSpaceInfo for Class B",
+          "request": {
+            "url": "{{airmarket_aws_dev}}/flightpathmobile/getAirSpaceInfo",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "application/json, text/javascript, */*",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20160426T022753Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160426/us-east-1/execute-api/aws4_request, SignedHeaders=accept;content-length;content-type;host;x-amz-date, Signature=e9c0c426bb8f8a5cdf80e3737a760283fd90b6e2fd0b6cf454fb01f19138463d",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "77p8ubq4lc.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "151",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"latitude\"  : \"49.19472222222222\",\n    \"longitude\" : \"-123.18388888889\",\n    \"altitude\"  : \"215\",\n    \"radius\"    : \"30\",\n    \"class\"     : \"B\"\n}"
+            },
+            "description": "Get AirSpace\n"
+          },
+          "response": [
+            {
+              "id": "03ca360e-0a26-fa0b-9238-c0a3891ce51d",
+              "name": "empty-success",
+              "originalRequest": {
+                "url": "{{airmarket_aws_dev}}/flightpathmobile/getAirSpaceInfo",
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json, text/javascript, */*",
+                    "description": ""
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "20160426T022753Z",
+                    "description": ""
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160426/us-east-1/execute-api/aws4_request, SignedHeaders=accept;content-length;content-type;host;x-amz-date, Signature=e9c0c426bb8f8a5cdf80e3737a760283fd90b6e2fd0b6cf454fb01f19138463d",
+                    "description": ""
+                  },
+                  {
+                    "key": "Host",
+                    "value": "77p8ubq4lc.execute-api.us-east-1.amazonaws.com",
+                    "description": ""
+                  },
+                  {
+                    "key": "Content-Length",
+                    "value": "151",
+                    "description": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"latitude\"  : \"49.19472222222222\",\n    \"longitude\" : \"-123.18388888889\",\n    \"altitude\"  : \"215\",\n    \"radius\"    : \"30\",\n    \"class\"     : \"B\"\n}"
+                },
+                "description": "Get AirSpace\n"
+              },
+              "status": "OK",
+              "code": "200",
+              "_postman_previewlanguage": "javascript",
+              "_postman_previewtype": "html",
+              "header": [
+                {
+                  "name": "Access-Control-Allow-Origin",
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*",
+                  "description": ""
+                },
+                {
+                  "name": "Connection",
+                  "key": "Connection",
+                  "value": "close",
+                  "description": ""
+                },
+                {
+                  "name": "Content-Type",
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "description": ""
+                },
+                {
+                  "name": "Date",
+                  "key": "Date",
+                  "value": "Sun, 06 Mar 2016 22:25:47 GMT",
+                  "description": ""
+                },
+                {
+                  "name": "Server",
+                  "key": "Server",
+                  "value": "Apache/2.4.18 (Unix) OpenSSL/1.0.1e-fips mod_bwlimited/1.4",
+                  "description": ""
+                },
+                {
+                  "name": "Transfer-Encoding",
+                  "key": "Transfer-Encoding",
+                  "value": "chunked",
+                  "description": ""
+                },
+                {
+                  "name": "X-Powered-By",
+                  "key": "X-Powered-By",
+                  "value": "PHP/5.5.32",
+                  "description": ""
+                }
+              ],
+              "responseTime": "416",
+              "body": "{\"result\":\"success\",\"airspace\":[]}"
+            }
+          ]
+        },
+        {
+          "_postman_id": "c6e07342-65a0-e3d8-8bfd-95245890add9",
+          "name": "processPoint",
+          "request": {
+            "url": "{{airmarket_aws_dev}}/flightpathmobile/processPoint",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "77p8ubq4lc.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "244",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20160426T022706Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160426/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=07fbf0f887b5c995c44a332cf8cfe117b32580f6af6dd0b873fe0ecad9e0d447",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"time\" : \"Mon, 04 Jan 2016 14:35:01 GMT\",\n  \"username\" : \"joe_test\", \n  \"mission\" : \"mission_march_006\",\n  \"latitude\" : \"49.249647\",\n  \"longitude\" : \"-123.083223\",\n  \"altitude\" : \"20.0\",\n  \"droneserialnumber\" : \"serial_number_x12345_test\"\n}"
+            },
+            "description": ""
+          }
+        },
+        {
+          "_postman_id": "93732112-3a1e-eba1-14d2-10bd80a04b93",
+          "name": "stopMission",
+          "request": {
+            "url": "{{airmarket_aws_dev}}/flightpathmobile/stopMission",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "77p8ubq4lc.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20160426T022722Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160426/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=e6afbe1a32141376b2cc791f25fcb7dde8705bce560c4cb121579c77926cd406",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "169",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"time\" : \"Mon, 04 Jan 2016 14:45:01 GMT\",\n  \"username\" : \"joe_test\", \n  \"mission\" : \"mission_march_006\",\n  \"droneserialnumber\" : \"serial_number_x12345_test\"\n    \n}\n\n"
+            },
+            "description": ""
+          }
+        },
+        {
+          "_postman_id": "3057dc73-f5e2-0656-247c-7fe09aad0a73",
+          "name": "startMission",
+          "request": {
+            "url": "{{airmarket_aws_dev}}/flightpathmobile/startMission",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "77p8ubq4lc.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20160421T004554Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160421/us-east-1/execute-api/aws4_request, SignedHeaders=content-type;host;x-amz-date, Signature=3917570d75864cdae3710a9892e383254d9776e61c12cf13f263d3839e30159c",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"droneserialnumber\" : \"mav_1234567_g_3\",\r\n    \"mission\" : \"mission_march_006\",\r\n    \"time\" : \"2016-02-20T12:45:25.291PST\",\r\n    \"username\" : \"Joe Test\"\r\n}"
+            },
+            "description": ""
+          }
+        },
+        {
+          "_postman_id": "edc6a220-05e0-de40-5e4b-2705891ac1f9",
+          "name": "assessUserLocation",
+          "request": {
+            "url": "{{airmarket_aws_dev}}/flightpathmobile/assessUserLocation",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "77p8ubq4lc.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20160703T151516Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160703/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=5dfda1245020bcd6310b376856ecd501797a8dac0127b66540f8b8f7d5927ffa",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "106",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"latitude\"  : \"49.19472222222222\",\n    \"longitude\" : \"-123.18388888889\",\n    \"radius\"    : \"50000\"\n}"
+            },
+            "description": ""
+          }
+        },
+        {
+          "_postman_id": "cce6cf00-d6c4-faa5-b981-bd2d9d37ecbc",
+          "name": "accessUserLoc (deprecated)",
+          "request": {
+            "url": "{{airmarket_aws_dev}}/flightpathmobile/accessUserLoc",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "77p8ubq4lc.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20160703T151516Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160703/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=5dfda1245020bcd6310b376856ecd501797a8dac0127b66540f8b8f7d5927ffa",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "106",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"latitude\"  : \"49.19472222222222\",\n    \"longitude\" : \"-123.18388888889\",\n    \"radius\"    : \"50000\"\n}"
+            },
+            "description": ""
+          }
+        },
+        {
+          "_postman_id": "c6dcd70c-4ebc-3f5a-acd0-fc50e2f54b75",
+          "name": "Build AAAA Report",
+          "request": {
+            "url": "https://f55ewthd79.execute-api.us-west-2.amazonaws.com/test/reports",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "f55ewthd79.execute-api.us-west-2.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20160520T193413Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160520/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=49fcab9c5fce3d107d516e21ac7c2d170b5ef1355e338fd24a186745a6ead1cc",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "60",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"flightName\": \"Ottawa6h_66\",\n    \"flightFlag\": false\n}"
+            },
+            "description": "Create the AirMarket Approved Aerial Assets report. "
+          }
+        }
+      ]
+    }
+  ]
+}
