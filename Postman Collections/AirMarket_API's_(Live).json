@@ -765,7 +765,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"latitude\"  : \"49.19472222222222\",\n    \"longitude\" : \"-123.18388888889\",\n    \"radius\"    : \"50000\"\n}"
+              "raw": "{\n    \"latitude\"  : \"51.069917\",\n    \"longitude\" : \"-114.023059\",\n    \"radius\"    : \"50000\"\n}"
             },
             "description": "This API is returns the Airprots within the provided radius.  The parameters are set to query the calgary downtown area.  "
           }
