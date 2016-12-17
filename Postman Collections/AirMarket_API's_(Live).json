@@ -674,7 +674,7 @@
       "item": [
         {
           "_postman_id": "2fb7f63a-5bd1-5b55-bd0f-210b5093987f",
-          "name": "assessUserLocation",
+          "name": "assessUserLocation (For Calgary)",
           "request": {
             "url": "{{server_url}}/{{sub_path}}airwebservice/mobile/flightpathmobile/assessUserLocation",
             "method": "POST",
@@ -709,7 +709,7 @@
               "mode": "raw",
               "raw": "{\n  \"time\" : \"Mon, 04 Jan 2016 14:35:01 GMT\",\n  \"username\" : \"joe_test\", \n  \"mission\" : \"mission_march_006\",\n  \"latitude\"  : \"51.069917\",\n  \"longitude\" : \"-114.023059\",\n  \"altitude\" : \"145.0\",\n  \"droneserialnumber\" : \"serial_number_x12345_test\",\n  \"sfoc\":\"true\"\n}"
             },
-            "description": ""
+            "description": "This API performs a Airspace Assessment for the provided location, altitude, username and returns the an Asessment Status with associated Airport & Airspace information. \n\nThis \n"
           }
         },
         {
