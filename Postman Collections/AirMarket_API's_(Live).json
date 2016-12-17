@@ -812,7 +812,7 @@
               "mode": "raw",
               "raw": "{\n    \"latitude\"  : \"51.069917\",\n    \"longitude\" : \"-114.023059\",\n    \"altitude\"  : \"700\",\n    \"radius\"    : \"300\",\n    \"class\"     : \"C\"\n}"
             },
-            "description": "Get AirSpace Information used in the AirMarket mobile apps."
+            "description": "This API returns the AirSpace info that intersects with the provided location & radius distance.  \n\nThe parameters is seup for evaluating downtown Calgary. "
           }
         },
         {
