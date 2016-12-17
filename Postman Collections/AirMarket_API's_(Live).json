@@ -707,7 +707,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"time\" : \"Mon, 04 Jan 2016 14:35:01 GMT\",\n  \"username\" : \"joe_test\", \n  \"mission\" : \"mission_march_006\",\n  \"latitude\" : \"49.249647\",\n  \"longitude\" : \"-123.083223\",\n  \"altitude\" : \"20.0\",\n  \"droneserialnumber\" : \"serial_number_x12345_test\",\n  \"sfoc\":\"true\"\n}"
+              "raw": "{\n  \"time\" : \"Mon, 04 Jan 2016 14:35:01 GMT\",\n  \"username\" : \"joe_test\", \n  \"mission\" : \"mission_march_006\",\n  \"latitude\"  : \"51.069917\",\n  \"longitude\" : \"-114.023059\",\n  \"altitude\" : \"145.0\",\n  \"droneserialnumber\" : \"serial_number_x12345_test\",\n  \"sfoc\":\"true\"\n}"
             },
             "description": ""
           }
