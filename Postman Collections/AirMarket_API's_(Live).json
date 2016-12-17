@@ -852,7 +852,7 @@
               "mode": "raw",
               "raw": "{\n    \"latitude\"  : \"51.069917\",\n    \"longitude\" : \"-114.023059\"\n}"
             },
-            "description": "This API returns the specific Flight Information Region (FIR) associated with the specific location provided. \n\n"
+            "description": "This API returns the specific Flight Information Region (FIR) associated with the specific location provided. \n\nThe parameters is seup for evaluating downtown Calgary. "
           }
         }
       ]
