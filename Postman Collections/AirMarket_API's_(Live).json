@@ -817,7 +817,7 @@
         },
         {
           "_postman_id": "bc44e180-85bf-d5c3-69a6-c56856485644",
-          "name": "firRegion",
+          "name": "firRegion (For Calgary)",
           "request": {
             "url": "{{server_url}}/{{sub_path}}airwebservice/mobile/flightpathmobile/firRegion",
             "method": "POST",
@@ -852,7 +852,7 @@
               "mode": "raw",
               "raw": "{\n    \"latitude\"  : \"51.069917\",\n    \"longitude\" : \"-114.023059\"\n}"
             },
-            "description": ""
+            "description": "This API returns the specific Flight Information Region (FIR) associated with the specific location provided. \n\n"
           }
         }
       ]
