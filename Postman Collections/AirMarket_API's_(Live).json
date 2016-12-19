@@ -749,7 +749,7 @@
           "_postman_id": "260103d5-9929-f314-f942-d63218d416bc",
           "name": "query airspace",
           "request": {
-            "url": "localhost/leaflet/query_airport.php",
+            "url": "dev.airmarket.io/leaflet/query_airport.php",
             "method": "POST",
             "header": [
               {
