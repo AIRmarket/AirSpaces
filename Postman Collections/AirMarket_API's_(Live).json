@@ -621,6 +621,178 @@
       ]
     },
     {
+      "_postman_id": "7321ad6c-424d-c4af-46e6-e6c33438cd1a",
+      "name": "6. AWS Web Api",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "85b19bc0-5eaf-4721-d73c-f7524cf02004",
+          "name": "query drone zone",
+          "request": {
+            "url": "{{server_url}}/{{sub_path}}droneZone/queryNoDroneZone",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20160721T000116Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160721/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=63f9f91befa8a4e7e456112dd390a5cf3672eaf5970175b627a78b5ac820bd94",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "22",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\":\"test1\"\n}"
+            },
+            "description": ""
+          }
+        },
+        {
+          "_postman_id": "0ccd9fc0-78ab-4347-c225-d492fe875149",
+          "name": "getDroneZoneInfo php",
+          "request": {
+            "url": "{{server_url}}/{{sub_path}}php_airspace_api/getDroneZoneInfo.php",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "application/json, text/javascript, */*",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20160721T164806Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160721/us-east-1/execute-api/aws4_request, SignedHeaders=accept;content-length;content-type;host;x-amz-date, Signature=69316dd6d207d68a95ea588e14bcd15d2c046174dd71358f78329af8315c3f6b",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "71",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"latitude\" : 54.6230,\n  \"longitude\" : -111.7968,\n  \"radius\":10000\n}"
+            },
+            "description": "\n"
+          }
+        },
+        {
+          "_postman_id": "91471546-5bd7-9a11-958d-ec58daacc1d9",
+          "name": "upload sfoc",
+          "request": {
+            "url": "{{server_url}}/{{sub_path}}droneZone/uploadsfoc",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "413",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20161025T220244Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20161025/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=34159780687f672f56d8ab99c7276ec80636ed9393f6692c7cc2abb242132a84",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"geojson\":\"{\\\"type\\\":\\\"MultiPolygon\\\",\\\"coordinates\\\":[[[[-111.35,57.01],[-112.06,57.08],[-110.55,57.06],[-111.35,57.01]]]]}\",\n    \"start_date\":\"2012-03-27 18:47:00\",\n    \"end_date\":\"2012-03-28 18:47:00\",\n    \"name\":\"202\",\n    \"classFpermission\":true,\n    \"classEpermission\":true,\n    \"classDpermission\":true,\n    \"classCpermission\":true,\n    \"classGpermission\":true,\n    \"notam\":\"hi\",\n    \"userid\":1\n    \n}"
+            },
+            "description": ""
+          }
+        },
+        {
+          "_postman_id": "6f952243-6a46-511c-b396-6dfd3ad9edbc",
+          "name": "query sfoc",
+          "request": {
+            "url": "{{server_url}}/{{sub_path}}droneZone/querysfoc",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "413",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20161025T220212Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20161025/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=47a23984f5bc64bd328ca592956838f13231d3cfa4fc762b1e6cf6a9d89e083f",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"geojson\":\"{\\\"type\\\":\\\"MultiPolygon\\\",\\\"coordinates\\\":[[[[-111.35,57.01],[-112.06,57.08],[-110.55,57.06],[-111.35,57.01]]]]}\",\n    \"start_date\":\"2012-03-27 18:47:00\",\n    \"end_date\":\"2012-03-28 18:47:00\",\n    \"name\":\"202\",\n    \"classFpermission\":true,\n    \"classEpermission\":true,\n    \"classDpermission\":true,\n    \"classCpermission\":true,\n    \"classGpermission\":true,\n    \"notam\":\"hi\",\n    \"userid\":1\n    \n}"
+            },
+            "description": ""
+          }
+        }
+      ]
+    },
+    {
       "_postman_id": "98920f59-72cd-11e2-508c-527570c6e822",
       "name": "2. AWS Gateway - User Airspace Info",
       "description": "API's that provide user based information about Airspaces or geospacial info: SFOC's, IFR, Jurisdictions, etc",
