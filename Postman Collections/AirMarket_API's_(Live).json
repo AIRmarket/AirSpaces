@@ -666,51 +666,6 @@
           }
         },
         {
-          "_postman_id": "0ccd9fc0-78ab-4347-c225-d492fe875149",
-          "name": "getDroneZoneInfo php",
-          "request": {
-            "url": "{{server_url}}/{{sub_path}}php_airspace_api/getDroneZoneInfo.php",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "Accept",
-                "value": "application/json, text/javascript, */*",
-                "description": ""
-              },
-              {
-                "key": "X-Amz-Date",
-                "value": "20160721T164806Z",
-                "description": ""
-              },
-              {
-                "key": "Authorization",
-                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160721/us-east-1/execute-api/aws4_request, SignedHeaders=accept;content-length;content-type;host;x-amz-date, Signature=69316dd6d207d68a95ea588e14bcd15d2c046174dd71358f78329af8315c3f6b",
-                "description": ""
-              },
-              {
-                "key": "Host",
-                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
-                "description": ""
-              },
-              {
-                "key": "Content-Length",
-                "value": "71",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"latitude\" : 54.6230,\n  \"longitude\" : -111.7968,\n  \"radius\":10000\n}"
-            },
-            "description": "\n"
-          }
-        },
-        {
           "_postman_id": "91471546-5bd7-9a11-958d-ec58daacc1d9",
           "name": "upload sfoc",
           "request": {
