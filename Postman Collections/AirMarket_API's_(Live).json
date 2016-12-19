@@ -669,7 +669,7 @@
           "_postman_id": "6f952243-6a46-511c-b396-6dfd3ad9edbc",
           "name": "query sfoc",
           "request": {
-            "url": "{{server_url}}/{{sub_path}}droneZone/querysfoc",
+            "url": "http://localhost/leaflet/php_airspace_api/airspaceapi/querySFOC",
             "method": "POST",
             "header": [
               {
