@@ -709,7 +709,7 @@
           "_postman_id": "6ef42ae4-f614-33aa-de00-f94afc37e6b6",
           "name": "query airport",
           "request": {
-            "url": "{{server_url}}/{{sub_path}}droneZone/queryNoDroneZone",
+            "url": "dev.airmarket.io/leaflet/query_airport.php",
             "method": "POST",
             "header": [
               {
@@ -740,7 +740,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"name\":\"test1\"\n}"
+              "raw": "{\n    \"lat\" : 51.069917,\n  \t\"lng\" : -114.023059,\n  \t\"radius\" : 0.18\n}"
             },
             "description": ""
           }
@@ -749,7 +749,7 @@
           "_postman_id": "260103d5-9929-f314-f942-d63218d416bc",
           "name": "query airspace",
           "request": {
-            "url": "dev.airmarket.io/leaflet/query_space.php",
+            "url": "dev.airmarket.io/leaflet/query_airspace.php",
             "method": "POST",
             "header": [
               {
