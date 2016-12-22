@@ -619,46 +619,6 @@
       "description": "",
       "item": [
         {
-          "_postman_id": "6f952243-6a46-511c-b396-6dfd3ad9edbc",
-          "name": "query sfoc",
-          "request": {
-            "url": "http://localhost/leaflet/php_airspace_api/airspaceapi/querySFOC",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "Host",
-                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
-                "description": ""
-              },
-              {
-                "key": "Content-Length",
-                "value": "413",
-                "description": ""
-              },
-              {
-                "key": "X-Amz-Date",
-                "value": "20161025T220212Z",
-                "description": ""
-              },
-              {
-                "key": "Authorization",
-                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20161025/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=47a23984f5bc64bd328ca592956838f13231d3cfa4fc762b1e6cf6a9d89e083f",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"geojson\":\"{\\\"type\\\":\\\"MultiPolygon\\\",\\\"coordinates\\\":[[[[-111.35,57.01],[-112.06,57.08],[-110.55,57.06],[-111.35,57.01]]]]}\",\n    \"start_date\":\"2012-03-27 18:47:00\",\n    \"end_date\":\"2012-03-28 18:47:00\",\n    \"name\":\"202\",\n    \"classFpermission\":true,\n    \"classEpermission\":true,\n    \"classDpermission\":true,\n    \"classCpermission\":true,\n    \"classGpermission\":true,\n    \"notam\":\"hi\",\n    \"userid\":1\n    \n}"
-            },
-            "description": ""
-          }
-        },
-        {
           "_postman_id": "6ef42ae4-f614-33aa-de00-f94afc37e6b6",
           "name": "query airport",
           "request": {
