@@ -7,202 +7,10 @@
   },
   "item": [
     {
-      "_postman_id": "6b8a5342-5fc1-744b-b54a-678f3ea4732c",
-      "name": "3. Pilot / MAV X - Process Flight Telemetry API's",
-      "description": "This can now be removed",
-      "item": [
-        {
-          "_postman_id": "da87a0f0-6b70-c494-5e87-e91808eb17f1",
-          "name": "startMission",
-          "request": {
-            "url": "{{server_url}}/{{sub_path}}airwebservice/mobile/flightpathmobile/startMission",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "Host",
-                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
-                "description": ""
-              },
-              {
-                "key": "X-Amz-Date",
-                "value": "20160720T235116Z",
-                "description": ""
-              },
-              {
-                "key": "Authorization",
-                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160720/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=6e2d9800909ab2b2fb214fe1eff56a10247210a4eb8ac74bb33e1ccd154f06d5",
-                "description": ""
-              },
-              {
-                "key": "Content-Length",
-                "value": "161",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n    \"droneserialnumber\" : \"mav_1234567_g_3\",\r\n    \"mission\" : \"mission_march_006\",\r\n    \"time\" : \"2016-02-20T12:45:25.291PST\",\r\n    \"username\" : \"Joe Test\"\r\n}"
-            },
-            "description": ""
-          }
-        },
-        {
-          "_postman_id": "b8d709f3-9141-2019-e1ec-2ac138192150",
-          "name": "stopMission",
-          "request": {
-            "url": "{{server_url}}/{{sub_path}}airwebservice/mobile/flightpathmobile/stopMission",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "Host",
-                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
-                "description": ""
-              },
-              {
-                "key": "X-Amz-Date",
-                "value": "20160720T235150Z",
-                "description": ""
-              },
-              {
-                "key": "Authorization",
-                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160720/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=68328b130c229708beffa66980495bf1c68edf7002bcada9d371594a3e80a495",
-                "description": ""
-              },
-              {
-                "key": "Content-Length",
-                "value": "169",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"time\" : \"Mon, 04 Jan 2016 14:45:01 GMT\",\n  \"username\" : \"joe_test\", \n  \"mission\" : \"mission_march_006\",\n  \"droneserialnumber\" : \"serial_number_x12345_test\"\n    \n}\n\n"
-            },
-            "description": ""
-          }
-        },
-        {
-          "_postman_id": "765c93b9-fb1d-1833-27af-d06b38254f2b",
-          "name": "processPoint",
-          "request": {
-            "url": "{{server_url}}/{{sub_path}}airwebservice/mobile/flightpathmobile/processPoint",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "Host",
-                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
-                "description": ""
-              },
-              {
-                "key": "X-Amz-Date",
-                "value": "20160720T235740Z",
-                "description": ""
-              },
-              {
-                "key": "Authorization",
-                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160720/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=1469214b58e3ae6d0dfeec231f490d35115f8822b8a00ff59c80162604694c67",
-                "description": ""
-              },
-              {
-                "key": "Content-Length",
-                "value": "247",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"time\" : \"Mon, 04 Jan 2016 14:35:01 GMT\",\n  \"username\" : \"joe_test\", \n  \"mission\" : \"mission_new_test_011\",\n  \"latitude\" : \"49.249647\",\n  \"longitude\" : \"-123.083223\",\n  \"altitude\" : \"20.0\",\n  \"droneserialnumber\" : \"serial_number_x12345_test\"\n}"
-            },
-            "description": "process a mission point"
-          }
-        },
-        {
-          "_postman_id": "3b37d753-7da0-130e-c4c7-c81a603c296b",
-          "name": "getLoadFlightLog",
-          "request": {
-            "url": "{{server_url}}/airwebservice/mobile/flightpathmobile/loadFlightPath",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "Accept",
-                "value": "application/json, text/javascript, */*",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"flightname\"  : \"dirtytom_mission_flight_008\",\n    \"username\" : \"dirtytom\"\n}"
-            },
-            "description": ""
-          }
-        }
-      ]
-    },
-    {
       "_postman_id": "7321ad6c-424d-c4af-46e6-e6c33438cd1a",
       "name": "1. Fly-Safe API's",
       "description": "",
       "item": [
-        {
-          "_postman_id": "6ef42ae4-f614-33aa-de00-f94afc37e6b6",
-          "name": "query airport",
-          "request": {
-            "url": "https://dev.airmarket.io/leaflet/query_airport.php",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "Host",
-                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
-                "description": ""
-              },
-              {
-                "key": "X-Amz-Date",
-                "value": "20160721T000116Z",
-                "description": ""
-              },
-              {
-                "key": "Authorization",
-                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160721/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=63f9f91befa8a4e7e456112dd390a5cf3672eaf5970175b627a78b5ac820bd94",
-                "description": ""
-              },
-              {
-                "key": "Content-Length",
-                "value": "22",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"lat\" : 51.069917,\n  \t\"lng\" : -114.023059,\n  \t\"radius\" : 0.18\n}"
-            },
-            "description": ""
-          }
-        },
         {
           "_postman_id": "260103d5-9929-f314-f942-d63218d416bc",
           "name": "query airspace",
@@ -434,6 +242,46 @@
           }
         }
       ]
+    },
+    {
+      "_postman_id": "6ef42ae4-f614-33aa-de00-f94afc37e6b6",
+      "name": "query airport",
+      "request": {
+        "url": "https://dev.airmarket.io/leaflet/query_airport.php",
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": ""
+          },
+          {
+            "key": "Host",
+            "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
+            "description": ""
+          },
+          {
+            "key": "X-Amz-Date",
+            "value": "20160721T000116Z",
+            "description": ""
+          },
+          {
+            "key": "Authorization",
+            "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160721/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=63f9f91befa8a4e7e456112dd390a5cf3672eaf5970175b627a78b5ac820bd94",
+            "description": ""
+          },
+          {
+            "key": "Content-Length",
+            "value": "22",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"lat\" : 51.069917,\n  \t\"lng\" : -114.023059,\n  \t\"radius\" : 0.18\n}"
+        },
+        "description": ""
+      }
     }
   ]
 }
