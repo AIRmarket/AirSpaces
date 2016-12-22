@@ -462,6 +462,461 @@
       ]
     },
     {
+      "_postman_id": "67184959-6bd8-edd9-3521-952a4b1bfc76",
+      "name": "4. AirSpaces - Manage Airspace API's copy",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "1abc2ec6-ceba-2514-266e-eafebc487c39",
+          "name": "upload airspace",
+          "request": {
+            "url": "{{server_url}}/{{sub_path}}droneZone/uploadAirSpace",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20160721T000211Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160721/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=79abf683deeb1f05185dbdcb98d381f9f2c381cec5bef3ad3002b004cf66b083",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "333",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"geojson\":\"{\\\"type\\\":\\\"MultiPolygon\\\",\\\"coordinates\\\":[[[[-111.35,57.01],[-112.06,57.08],[-110.55,57.06],[-111.35,57.01]]]]}\",\n    \"floor\":\"10\",\n    \"ceiling\":\"20\",\n    \"start\":\"2012-03-27 18:47:00\",\n    \"end\":\"2012-03-28 18:47:00\",\n    \"name\":\"202\",\n    \"proximityMsg\":\"hi\",\n    \"intersectionMsg\":\"hi\",\n    \"notam\":\"hi\"\n    \n}"
+            },
+            "description": "Get AirSpace\n"
+          }
+        },
+        {
+          "_postman_id": "90d8bd6d-c992-d74b-e6f4-b228864cfac9",
+          "name": "query no drone zone list",
+          "request": {
+            "url": "{{server_url}}/{{sub_path}}droneZone/queryNoDroneZoneList",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20160721T000426Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160721/us-east-1/execute-api/aws4_request, SignedHeaders=content-type;host;x-amz-date, Signature=391e8a576f25e7a975c0f918336224c906d3456d6d188bf5109edb08c917a385",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "169",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata"
+            },
+            "description": ""
+          }
+        },
+        {
+          "_postman_id": "a254fd5b-0df7-af84-3568-b3250f28de45",
+          "name": "query drone zone",
+          "request": {
+            "url": "{{server_url}}/{{sub_path}}droneZone/queryNoDroneZone",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20160721T000116Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160721/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=63f9f91befa8a4e7e456112dd390a5cf3672eaf5970175b627a78b5ac820bd94",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "22",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\":\"test1\"\n}"
+            },
+            "description": ""
+          }
+        },
+        {
+          "_postman_id": "e9e51a92-e5bb-b57b-fa4d-2c611ab2ab53",
+          "name": "query temporaryAirspaceList",
+          "request": {
+            "url": "{{server_url}}/{{sub_path}}droneZone/queryTemporaryAirspaceList",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20160721T000037Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160721/us-east-1/execute-api/aws4_request, SignedHeaders=content-type;host;x-amz-date, Signature=4b8b332af9d89a5b22d30af6d842bd945f18c32e762d659382bc331cf4bf0ee1",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "169",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "formdata"
+            },
+            "description": ""
+          }
+        },
+        {
+          "_postman_id": "3f5c10d2-7b2f-0ccf-7282-606dc0e9fee7",
+          "name": "terminate airspace",
+          "request": {
+            "url": "{{server_url}}/{{sub_path}}droneZone/terminateAirspace",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20160721T000000Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160721/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=0b2d23b5a1e27e4e6b39231ca1ce40141fffddc9cf3a4dfe11510bd59d75022a",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "13",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n   \"id\":1\n}"
+            },
+            "description": ""
+          }
+        },
+        {
+          "_postman_id": "3170d608-ad27-6df5-f59e-903807ae6b55",
+          "name": "registerDroneZone (upload no drone zone)",
+          "request": {
+            "url": "{{server_url}}/{{sub_path}}droneZone/registerDroneZone",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20160720T235829Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160720/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=d102522f17240c1c66755e65e84d44f0c402f17521c5a4c48fc1f2b7610a54a0",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "376",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"geojson\":\"{\\\"type\\\":\\\"MultiPolygon\\\",\\\"coordinates\\\":[[[[-111.35,57.01],[-112.06,57.08],[-110.55,57.06],[-111.35,57.01]]]]}\",\n    \"floor\":\"10\",\n    \"ceiling\":\"20\",\n    \"start\":\"2012-03-27 18:47:00\",\n    \"end\":\"2012-03-28 18:47:00\",\n    \"name\":\"202\",\n    \"desc\":\"test\",\n    \"proximityMsg\":\"hi\",\n    \"intersectionMsg\":\"hi\",\n    \"notam\":\"hi\",\n    \"flypermission\":\"false\"\n}"
+            },
+            "description": "Get AirSpace\n"
+          }
+        },
+        {
+          "_postman_id": "67c10693-5b27-63d6-287b-42519e941f09",
+          "name": "query temporary airspace",
+          "request": {
+            "url": "{{server_url}}/{{sub_path}}droneZone/queryTemporaryAirspace",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20160720T235443Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160720/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=edafce76da8d6433897eafcb3c3fb8695301698315a5b7ba41fe1ead81fe10e0",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "17",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\":1080\n}"
+            },
+            "description": ""
+          }
+        },
+        {
+          "_postman_id": "845c648f-094d-d6e0-84be-aefdbf9bb045",
+          "name": "getDroneZoneInfo",
+          "request": {
+            "url": "{{server_url}}/{{sub_path}}droneZone/getDroneZoneInfo",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "application/json, text/javascript, */*",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20160721T164806Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160721/us-east-1/execute-api/aws4_request, SignedHeaders=accept;content-length;content-type;host;x-amz-date, Signature=69316dd6d207d68a95ea588e14bcd15d2c046174dd71358f78329af8315c3f6b",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "71",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"latitude\" : 54.6230,\n  \"longitude\" : -111.7968,\n  \"radius\":10000\n}"
+            },
+            "description": "\n"
+          }
+        },
+        {
+          "_postman_id": "bfc5badc-0d12-47f3-e52e-761b5b54a2fd",
+          "name": "getDroneZoneInfo php",
+          "request": {
+            "url": "{{server_url}}/{{sub_path}}php_airspace_api/getDroneZoneInfo.php",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "application/json, text/javascript, */*",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20160721T164806Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160721/us-east-1/execute-api/aws4_request, SignedHeaders=accept;content-length;content-type;host;x-amz-date, Signature=69316dd6d207d68a95ea588e14bcd15d2c046174dd71358f78329af8315c3f6b",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "71",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"latitude\" : 54.6230,\n  \"longitude\" : -111.7968,\n  \"radius\":10000\n}"
+            },
+            "description": "\n"
+          }
+        },
+        {
+          "_postman_id": "20a4daee-42b9-515d-f5ff-841684912a16",
+          "name": "upload sfoc",
+          "request": {
+            "url": "{{server_url}}/{{sub_path}}droneZone/uploadsfoc",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "413",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20161025T220244Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20161025/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=34159780687f672f56d8ab99c7276ec80636ed9393f6692c7cc2abb242132a84",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"geojson\":\"{\\\"type\\\":\\\"MultiPolygon\\\",\\\"coordinates\\\":[[[[-111.35,57.01],[-112.06,57.08],[-110.55,57.06],[-111.35,57.01]]]]}\",\n    \"start_date\":\"2012-03-27 18:47:00\",\n    \"end_date\":\"2012-03-28 18:47:00\",\n    \"name\":\"202\",\n    \"classFpermission\":true,\n    \"classEpermission\":true,\n    \"classDpermission\":true,\n    \"classCpermission\":true,\n    \"classGpermission\":true,\n    \"notam\":\"hi\",\n    \"userid\":1\n    \n}"
+            },
+            "description": ""
+          }
+        },
+        {
+          "_postman_id": "67df54e4-2fd7-678e-7f60-61c327ff375b",
+          "name": "query sfoc",
+          "request": {
+            "url": "{{server_url}}/{{sub_path}}droneZone/querysfoc",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "413",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20161025T220212Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20161025/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=47a23984f5bc64bd328ca592956838f13231d3cfa4fc762b1e6cf6a9d89e083f",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"geojson\":\"{\\\"type\\\":\\\"MultiPolygon\\\",\\\"coordinates\\\":[[[[-111.35,57.01],[-112.06,57.08],[-110.55,57.06],[-111.35,57.01]]]]}\",\n    \"start_date\":\"2012-03-27 18:47:00\",\n    \"end_date\":\"2012-03-28 18:47:00\",\n    \"name\":\"202\",\n    \"classFpermission\":true,\n    \"classEpermission\":true,\n    \"classDpermission\":true,\n    \"classCpermission\":true,\n    \"classGpermission\":true,\n    \"notam\":\"hi\",\n    \"userid\":1\n    \n}"
+            },
+            "description": ""
+          }
+        }
+      ]
+    },
+    {
       "_postman_id": "6b8a5342-5fc1-744b-b54a-678f3ea4732c",
       "name": "3. Pilot / MAV X - Process Flight Telemetry API's",
       "description": "This can now be removed",
