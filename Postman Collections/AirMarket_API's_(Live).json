@@ -280,6 +280,46 @@
         },
         "description": ""
       }
+    },
+    {
+      "_postman_id": "c9c22704-a339-62e1-69d0-386d8e6b4e37",
+      "name": "query airport copy",
+      "request": {
+        "url": "https://dev.airmarket.io/leaflet/query_airport.php",
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": ""
+          },
+          {
+            "key": "Host",
+            "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
+            "description": ""
+          },
+          {
+            "key": "X-Amz-Date",
+            "value": "20160721T000116Z",
+            "description": ""
+          },
+          {
+            "key": "Authorization",
+            "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160721/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=63f9f91befa8a4e7e456112dd390a5cf3672eaf5970175b627a78b5ac820bd94",
+            "description": ""
+          },
+          {
+            "key": "Content-Length",
+            "value": "22",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"lat\" : 51.069917,\n    \"lng\" : -114.023059,\n    \"radius\" : 0.18\n}"
+        },
+        "description": ""
+      }
     }
   ]
 }
