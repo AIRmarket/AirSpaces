@@ -495,7 +495,7 @@
     },
     {
       "_postman_id": "6b8a5342-5fc1-744b-b54a-678f3ea4732c",
-      "name": "5. AWS Gateway - Status Report API",
+      "name": "5. AirMarket Pilot / MAV X - Process Flight Telemetry API's",
       "description": "This can now be removed",
       "item": [
         {
