@@ -749,7 +749,7 @@
     },
     {
       "_postman_id": "98920f59-72cd-11e2-508c-527570c6e822",
-      "name": "2. AWS Gateway - User Airspace Info",
+      "name": "8. Fly-Safe Reporting - User Airspace Info",
       "description": "API's that provide user based information about Airspaces or geospacial info: SFOC's, IFR, Jurisdictions, etc",
       "item": [
         {
