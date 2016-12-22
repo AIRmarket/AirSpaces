@@ -9,49 +9,7 @@
     {
       "_postman_id": "7321ad6c-424d-c4af-46e6-e6c33438cd1a",
       "name": "1. Fly-Safe API's",
-      "description": "",
-      "item": [
-        {
-          "_postman_id": "260103d5-9929-f314-f942-d63218d416bc",
-          "name": "query airspace",
-          "request": {
-            "url": "https://dev.airmarket.io/leaflet/query_airspace.php",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "Host",
-                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
-                "description": ""
-              },
-              {
-                "key": "X-Amz-Date",
-                "value": "20160721T000116Z",
-                "description": ""
-              },
-              {
-                "key": "Authorization",
-                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160721/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=63f9f91befa8a4e7e456112dd390a5cf3672eaf5970175b627a78b5ac820bd94",
-                "description": ""
-              },
-              {
-                "key": "Content-Length",
-                "value": "22",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"lat\" : 51.069917,\n  \t\"lng\" : -114.023059,\n  \t\"radius\" : 0.18,\n  \t\"type\":\"fab\"\n}"
-            },
-            "description": ""
-          }
-        }
-      ]
+      "description": ""
     },
     {
       "_postman_id": "af3f9c7e-3af6-774a-a7bb-90d694d4fc26",
@@ -279,6 +237,46 @@
         "body": {
           "mode": "raw",
           "raw": "{\n    \"lat\" : 51.069917,\n  \t\"lng\" : -114.023059,\n  \t\"radius\" : 0.18\n}"
+        },
+        "description": ""
+      }
+    },
+    {
+      "_postman_id": "260103d5-9929-f314-f942-d63218d416bc",
+      "name": "query airspace",
+      "request": {
+        "url": "https://dev.airmarket.io/leaflet/query_airspace.php",
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": ""
+          },
+          {
+            "key": "Host",
+            "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
+            "description": ""
+          },
+          {
+            "key": "X-Amz-Date",
+            "value": "20160721T000116Z",
+            "description": ""
+          },
+          {
+            "key": "Authorization",
+            "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160721/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=63f9f91befa8a4e7e456112dd390a5cf3672eaf5970175b627a78b5ac820bd94",
+            "description": ""
+          },
+          {
+            "key": "Content-Length",
+            "value": "22",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"lat\" : 51.069917,\n  \t\"lng\" : -114.023059,\n  \t\"radius\" : 0.18,\n  \t\"type\":\"fab\"\n}"
         },
         "description": ""
       }
