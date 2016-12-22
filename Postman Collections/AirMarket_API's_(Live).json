@@ -12,64 +12,6 @@
       "description": "These are the API's used by the AirMarket mobile applications.  These are used to return all required data to the current mobile clients. ",
       "item": [
         {
-          "_postman_id": "21d91d59-ffe3-7e39-55ea-c8331e9bcc27",
-          "name": "getClosestAirportList (For Calgary)",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "postman.setGlobalVariable(\"flightPathMobileUrl\", \"dev.airmarket.io/leaflet/airwebservice/mobile/flightpathmobile\");",
-                  "",
-                  ""
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "{{server_url}}/{{sub_path}}airwebservice/mobile/flightpathmobile/getClosestAirportList",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "Accept",
-                "value": "application/json, text/javascript, */*",
-                "description": ""
-              },
-              {
-                "key": "X-Amz-Date",
-                "value": "20160720T232752Z",
-                "description": ""
-              },
-              {
-                "key": "Authorization",
-                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160720/us-east-1/execute-api/aws4_request, SignedHeaders=accept;content-length;content-type;host;x-amz-date, Signature=9b13e8403742b3b00aa04916798dbd19418d0a152008814e1004f02835639430",
-                "description": ""
-              },
-              {
-                "key": "Host",
-                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
-                "description": ""
-              },
-              {
-                "key": "Content-Length",
-                "value": "106",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"latitude\"  : \"51.069917\",\n    \"longitude\" : \"-114.023059\",\n    \"radius\"    : \"50000\"\n}"
-            },
-            "description": "This API is returns the Airprots within the provided radius.  The parameters are set to query the calgary downtown area.  \n\nThe parameters is seup for evaluating downtown Calgary. "
-          }
-        },
-        {
           "_postman_id": "8b6ed90b-d593-bb4f-499d-9faaa30ff84b",
           "name": "getAirSpaceInfo  (Class C for Calgary)",
           "request": {
