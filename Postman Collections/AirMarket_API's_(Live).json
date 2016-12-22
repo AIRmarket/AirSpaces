@@ -748,11 +748,6 @@
       ]
     },
     {
-      "_postman_id": "98920f59-72cd-11e2-508c-527570c6e822",
-      "name": "8. Fly-Safe Reporting - User Airspace Info",
-      "description": "API's that provide user based information about Airspaces or geospacial info: SFOC's, IFR, Jurisdictions, etc"
-    },
-    {
       "_postman_id": "af3f9c7e-3af6-774a-a7bb-90d694d4fc26",
       "name": "2. AirSpaces - Get Aviation Data API's",
       "description": "These are the API's used by the AirMarket mobile applications.  These are used to return all required data to the current mobile clients. ",
