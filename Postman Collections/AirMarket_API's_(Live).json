@@ -750,49 +750,7 @@
     {
       "_postman_id": "98920f59-72cd-11e2-508c-527570c6e822",
       "name": "8. Fly-Safe Reporting - User Airspace Info",
-      "description": "API's that provide user based information about Airspaces or geospacial info: SFOC's, IFR, Jurisdictions, etc",
-      "item": [
-        {
-          "_postman_id": "698fc225-31ac-5c26-e792-990db1530c10",
-          "name": "Build AAAA Report (NODE JS)",
-          "request": {
-            "url": "https://f55ewthd79.execute-api.us-west-2.amazonaws.com/test/reports",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "Host",
-                "value": "f55ewthd79.execute-api.us-west-2.amazonaws.com",
-                "description": ""
-              },
-              {
-                "key": "X-Amz-Date",
-                "value": "20160520T193413Z",
-                "description": ""
-              },
-              {
-                "key": "Authorization",
-                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160520/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=49fcab9c5fce3d107d516e21ac7c2d170b5ef1355e338fd24a186745a6ead1cc",
-                "description": ""
-              },
-              {
-                "key": "Content-Length",
-                "value": "60",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"flightName\": \"Ottawa6h_66\",\n    \"flightFlag\": false\n}"
-            },
-            "description": "Create the AirMarket Approved Aerial Assets report. "
-          }
-        }
-      ]
+      "description": "API's that provide user based information about Airspaces or geospacial info: SFOC's, IFR, Jurisdictions, etc"
     },
     {
       "_postman_id": "af3f9c7e-3af6-774a-a7bb-90d694d4fc26",
@@ -1703,6 +1661,46 @@
         {
           "_postman_id": "c6dcd70c-4ebc-3f5a-acd0-fc50e2f54b75",
           "name": "Build AAAA Report",
+          "request": {
+            "url": "https://f55ewthd79.execute-api.us-west-2.amazonaws.com/test/reports",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Host",
+                "value": "f55ewthd79.execute-api.us-west-2.amazonaws.com",
+                "description": ""
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20160520T193413Z",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160520/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=49fcab9c5fce3d107d516e21ac7c2d170b5ef1355e338fd24a186745a6ead1cc",
+                "description": ""
+              },
+              {
+                "key": "Content-Length",
+                "value": "60",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"flightName\": \"Ottawa6h_66\",\n    \"flightFlag\": false\n}"
+            },
+            "description": "Create the AirMarket Approved Aerial Assets report. "
+          }
+        },
+        {
+          "_postman_id": "698fc225-31ac-5c26-e792-990db1530c10",
+          "name": "Build AAAA Report (NODE JS)",
           "request": {
             "url": "https://f55ewthd79.execute-api.us-west-2.amazonaws.com/test/reports",
             "method": "POST",
