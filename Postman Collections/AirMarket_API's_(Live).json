@@ -8,7 +8,7 @@
   "item": [
     {
       "_postman_id": "3998612d-207a-479d-7355-6299ed286266",
-      "name": "3. AirSpaces - Manage Airspace API's",
+      "name": "4. AirSpaces - Manage Airspace API's",
       "description": "",
       "item": [
         {
@@ -463,7 +463,7 @@
     },
     {
       "_postman_id": "6b8a5342-5fc1-744b-b54a-678f3ea4732c",
-      "name": "4. Pilot / MAV X - Process Flight Telemetry API's",
+      "name": "3. Pilot / MAV X - Process Flight Telemetry API's",
       "description": "This can now be removed",
       "item": [
         {
@@ -932,7 +932,7 @@
     },
     {
       "_postman_id": "db088715-e8cf-a96e-6d86-033ee8a44a25",
-      "name": "Drone Zone (Internal, needs update) API",
+      "name": "-Drone Zone (Internal, needs update) API",
       "description": "",
       "item": [
         {
