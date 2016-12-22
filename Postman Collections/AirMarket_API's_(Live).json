@@ -7,11 +7,6 @@
   },
   "item": [
     {
-      "_postman_id": "7321ad6c-424d-c4af-46e6-e6c33438cd1a",
-      "name": "1. Fly-Safe API's",
-      "description": ""
-    },
-    {
       "_postman_id": "af3f9c7e-3af6-774a-a7bb-90d694d4fc26",
       "name": "2. AirSpaces - Get Aviation Data API's",
       "description": "These are the API's used by the AirMarket mobile applications.  These are used to return all required data to the current mobile clients. ",
