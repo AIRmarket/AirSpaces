@@ -7,11 +7,6 @@
   },
   "item": [
     {
-      "_postman_id": "0dd8f48b-001c-67d2-053c-579ee2e6ebec",
-      "name": "flightlog api (needs update)",
-      "description": "store and retrieve flight path info"
-    },
-    {
       "_postman_id": "3998612d-207a-479d-7355-6299ed286266",
       "name": "3. AirSpaces - Manage Airspace API's",
       "description": "",
