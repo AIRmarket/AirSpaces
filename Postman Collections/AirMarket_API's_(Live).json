@@ -754,7 +754,7 @@
       "item": [
         {
           "_postman_id": "698fc225-31ac-5c26-e792-990db1530c10",
-          "name": "Build AAAA Report",
+          "name": "Build AAAA Report (NODE JS)",
           "request": {
             "url": "https://f55ewthd79.execute-api.us-west-2.amazonaws.com/test/reports",
             "method": "POST",
