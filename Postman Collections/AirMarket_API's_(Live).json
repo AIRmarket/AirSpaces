@@ -12,46 +12,6 @@
       "description": "These are the API's used by the AirMarket mobile applications.  These are used to return all required data to the current mobile clients. ",
       "item": [
         {
-          "_postman_id": "2fb7f63a-5bd1-5b55-bd0f-210b5093987f",
-          "name": "assessUserLocation (For Calgary)",
-          "request": {
-            "url": "{{server_url}}/{{sub_path}}airwebservice/mobile/flightpathmobile/assessUserLocation",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "Host",
-                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
-                "description": ""
-              },
-              {
-                "key": "X-Amz-Date",
-                "value": "20160804T235515Z",
-                "description": ""
-              },
-              {
-                "key": "Authorization",
-                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160804/us-west-2/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=85b07897d1cec5faf9c3d63ec46be966b8aad269c63886ab8edcafd0c459caa0",
-                "description": ""
-              },
-              {
-                "key": "Content-Length",
-                "value": "261",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"time\" : \"Mon, 04 Jan 2016 14:35:01 GMT\",\n  \"username\" : \"joe_test\", \n  \"mission\" : \"mission_march_006\",\n  \"latitude\"  : \"51.069917\",\n  \"longitude\" : \"-114.023059\",\n  \"altitude\" : \"145.0\",\n  \"droneserialnumber\" : \"serial_number_x12345_test\",\n  \"sfoc\":\"true\"\n}"
-            },
-            "description": "This API performs a Airspace Assessment for the provided location, altitude, username and returns the an Asessment Status with associated Airport & Airspace information. \n\nThe parameters is seup for evaluating downtown Calgary. "
-          }
-        },
-        {
           "_postman_id": "21d91d59-ffe3-7e39-55ea-c8331e9bcc27",
           "name": "getClosestAirportList (For Calgary)",
           "event": [
@@ -195,86 +155,6 @@
           }
         }
       ]
-    },
-    {
-      "_postman_id": "6ef42ae4-f614-33aa-de00-f94afc37e6b6",
-      "name": "query airport",
-      "request": {
-        "url": "https://dev.airmarket.io/leaflet/query_airport.php",
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json",
-            "description": ""
-          },
-          {
-            "key": "Host",
-            "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
-            "description": ""
-          },
-          {
-            "key": "X-Amz-Date",
-            "value": "20160721T000116Z",
-            "description": ""
-          },
-          {
-            "key": "Authorization",
-            "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160721/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=63f9f91befa8a4e7e456112dd390a5cf3672eaf5970175b627a78b5ac820bd94",
-            "description": ""
-          },
-          {
-            "key": "Content-Length",
-            "value": "22",
-            "description": ""
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n    \"lat\" : 51.069917,\n  \t\"lng\" : -114.023059,\n  \t\"radius\" : 0.18\n}"
-        },
-        "description": ""
-      }
-    },
-    {
-      "_postman_id": "260103d5-9929-f314-f942-d63218d416bc",
-      "name": "query airspace",
-      "request": {
-        "url": "https://dev.airmarket.io/leaflet/query_airspace.php",
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json",
-            "description": ""
-          },
-          {
-            "key": "Host",
-            "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com",
-            "description": ""
-          },
-          {
-            "key": "X-Amz-Date",
-            "value": "20160721T000116Z",
-            "description": ""
-          },
-          {
-            "key": "Authorization",
-            "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160721/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=63f9f91befa8a4e7e456112dd390a5cf3672eaf5970175b627a78b5ac820bd94",
-            "description": ""
-          },
-          {
-            "key": "Content-Length",
-            "value": "22",
-            "description": ""
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n    \"lat\" : 51.069917,\n  \t\"lng\" : -114.023059,\n  \t\"radius\" : 0.18,\n  \t\"type\":\"fab\"\n}"
-        },
-        "description": ""
-      }
     }
   ]
 }
