@@ -590,31 +590,6 @@
             },
             "description": "process a mission point"
           }
-        },
-        {
-          "_postman_id": "3b37d753-7da0-130e-c4c7-c81a603c296b",
-          "name": "getLoadFlightLog",
-          "request": {
-            "url": "{{server_url}}/airwebservice/mobile/flightpathmobile/loadFlightPath",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "Accept",
-                "value": "application/json, text/javascript, */*",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"flightname\"  : \"dirtytom_mission_flight_008\",\n    \"username\" : \"dirtytom\"\n}"
-            },
-            "description": ""
-          }
         }
       ]
     },
@@ -1739,6 +1714,31 @@
           }
         }
       ]
+    },
+    {
+      "_postman_id": "3b37d753-7da0-130e-c4c7-c81a603c296b",
+      "name": "getLoadFlightLog",
+      "request": {
+        "url": "{{server_url}}/airwebservice/mobile/flightpathmobile/loadFlightPath",
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": ""
+          },
+          {
+            "key": "Accept",
+            "value": "application/json, text/javascript, */*",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"flightname\"  : \"dirtytom_mission_flight_008\",\n    \"username\" : \"dirtytom\"\n}"
+        },
+        "description": ""
+      }
     }
   ]
 }
