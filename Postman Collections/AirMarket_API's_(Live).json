@@ -796,7 +796,7 @@
     },
     {
       "_postman_id": "af3f9c7e-3af6-774a-a7bb-90d694d4fc26",
-      "name": "3. AWS Gateway - Mobile Clients: Airport/AirSpace",
+      "name": "3. AirSpaces API's",
       "description": "These are the API's used by the AirMarket mobile applications.  These are used to return all required data to the current mobile clients. ",
       "item": [
         {
