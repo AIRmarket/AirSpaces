@@ -1,8 +1,17 @@
 {
+  "variables": [],
   "info": {
     "name": "1. AM PROD API's (Live)",
     "_postman_id": "e9fb2fe0-129f-877e-b143-a21033a4350e",
     "description": "These are the live API's used by the AirMarket the products on Platform.",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
-  }
+  },
+  "item": [
+    {
+      "_postman_id": "af3f9c7e-3af6-774a-a7bb-90d694d4fc26",
+      "name": "AWS DEV - Air Space API",
+      "description": "This can now be removed",
+      "item": []
+    }
+  ]
 }
