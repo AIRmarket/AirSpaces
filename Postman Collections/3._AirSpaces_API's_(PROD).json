@@ -452,27 +452,6 @@
         "description": "yves"
       },
       "response": []
-    },
-    {
-      "_postman_id": "b4c7e436-4afd-3611-73ba-1c29f729215d",
-      "name": "processflight copy",
-      "request": {
-        "url": "http://dev.airmarket.io/leaflet/airwebservice/mobile/flightpathmobile/processFlight",
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json",
-            "description": ""
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"id\":\"A41A38CB-DBA3-0813-70E6-3BAE01CB0074\",\n  \"user\":\"yiyang\"\n}"
-        },
-        "description": "yves"
-      },
-      "response": []
     }
   ]
 }
