@@ -452,6 +452,27 @@
         "description": "yves"
       },
       "response": []
+    },
+    {
+      "_postman_id": "a88dc700-6937-5fbd-737f-4f08bf900c22",
+      "name": "processPreflight",
+      "request": {
+        "url": "http://dev.airmarket.io/leaflet/airwebservice/mobile/flightpathmobile/processPreFlight",
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\n  \"id\":\"A41A38CB-DBA3-0813-70E6-3BAE01CB0074\",\n  \"user\":\"yiyang\"\n}"
+        },
+        "description": "yves"
+      },
+      "response": []
     }
   ]
 }
