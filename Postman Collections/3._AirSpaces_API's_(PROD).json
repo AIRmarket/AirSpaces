@@ -117,111 +117,111 @@
             "description": "This API returns the AirSpace info that intersects with the provided location & radius distance.  \n\nThe parameters is seup for evaluating downtown Mexico City. "
           },
           "response": []
-        },
-        {
-          "_postman_id": "664aee68-2046-4d0b-095f-c3b3d511e91f",
-          "name": "assessUserLocation (For Mexico City)",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Response time is less than 200ms\"] = responseTime < 200;",
-                  "",
-                  "",
-                  "tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Host",
-                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com"
-              },
-              {
-                "key": "X-Amz-Date",
-                "value": "20160804T235515Z"
-              },
-              {
-                "key": "Authorization",
-                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160804/us-west-2/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=85b07897d1cec5faf9c3d63ec46be966b8aad269c63886ab8edcafd0c459caa0"
-              },
-              {
-                "key": "Content-Length",
-                "value": "261"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"time\" : \"Mon, 04 Jan 2016 14:35:01 GMT\",\n  \"username\" : \"joe_test\", \n  \"mission\" : \"mission_march_006\",\n  \"latitude\": \"19.430232933675224\",\n  \"longitude\": \"-99.11749362945557\",\n  \"altitude\" : \"145.0\",\n  \"droneserialnumber\" : \"serial_number_x12345_test\",\n  \"sfoc\":\"false\"\n}"
-            },
-            "url": "{{server_url}}/{{sub_path}}airwebservice/mobile/flightpathmobile/assessUserLocation",
-            "description": "This API performs a Airspace Assessment for the provided location, altitude, username and returns the an Asessment Status with associated Airport & Airspace information. \n\nThe parameters is seup for evaluating downtown Mexico Mexico City. "
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "580a2ed6-1f35-d661-c322-840ace8fe607",
-          "name": "getClosestAirportList (For Calgary)",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
-                  "",
-                  "tests[\"Response time is less than 200ms\"] = responseTime < 200;"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json, text/javascript, */*"
-              },
-              {
-                "key": "X-Amz-Date",
-                "value": "20160720T232752Z"
-              },
-              {
-                "key": "Authorization",
-                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160720/us-east-1/execute-api/aws4_request, SignedHeaders=accept;content-length;content-type;host;x-amz-date, Signature=9b13e8403742b3b00aa04916798dbd19418d0a152008814e1004f02835639430"
-              },
-              {
-                "key": "Host",
-                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com"
-              },
-              {
-                "key": "Content-Length",
-                "value": "106"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"latitude\"  : \"51.069917\",\n    \"longitude\" : \"-114.023059\",\n    \"radius\"    : \"50000\"\n}"
-            },
-            "url": "{{server_url}}/{{sub_path}}airwebservice/mobile/flightpathmobile/getClosestAirportList",
-            "description": "This API is returns the Airprots within the provided radius.  The parameters are set to query the calgary downtown area.  \n\nThe parameters is seup for evaluating downtown Calgary. "
-          },
-          "response": []
         }
       ]
+    },
+    {
+      "_postman_id": "664aee68-2046-4d0b-095f-c3b3d511e91f",
+      "name": "assessUserLocation (For Mexico City)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+              "",
+              "",
+              "tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Host",
+            "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com"
+          },
+          {
+            "key": "X-Amz-Date",
+            "value": "20160804T235515Z"
+          },
+          {
+            "key": "Authorization",
+            "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160804/us-west-2/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=85b07897d1cec5faf9c3d63ec46be966b8aad269c63886ab8edcafd0c459caa0"
+          },
+          {
+            "key": "Content-Length",
+            "value": "261"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"time\" : \"Mon, 04 Jan 2016 14:35:01 GMT\",\n  \"username\" : \"joe_test\", \n  \"mission\" : \"mission_march_006\",\n  \"latitude\": \"19.430232933675224\",\n  \"longitude\": \"-99.11749362945557\",\n  \"altitude\" : \"145.0\",\n  \"droneserialnumber\" : \"serial_number_x12345_test\",\n  \"sfoc\":\"false\"\n}"
+        },
+        "url": "{{server_url}}/{{sub_path}}airwebservice/mobile/flightpathmobile/assessUserLocation",
+        "description": "This API performs a Airspace Assessment for the provided location, altitude, username and returns the an Asessment Status with associated Airport & Airspace information. \n\nThe parameters is seup for evaluating downtown Mexico Mexico City. "
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "580a2ed6-1f35-d661-c322-840ace8fe607",
+      "name": "getClosestAirportList (For Calgary)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+              "",
+              "tests[\"Response time is less than 200ms\"] = responseTime < 200;"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json, text/javascript, */*"
+          },
+          {
+            "key": "X-Amz-Date",
+            "value": "20160720T232752Z"
+          },
+          {
+            "key": "Authorization",
+            "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160720/us-east-1/execute-api/aws4_request, SignedHeaders=accept;content-length;content-type;host;x-amz-date, Signature=9b13e8403742b3b00aa04916798dbd19418d0a152008814e1004f02835639430"
+          },
+          {
+            "key": "Host",
+            "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com"
+          },
+          {
+            "key": "Content-Length",
+            "value": "106"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"latitude\"  : \"51.069917\",\n    \"longitude\" : \"-114.023059\",\n    \"radius\"    : \"50000\"\n}"
+        },
+        "url": "{{server_url}}/{{sub_path}}airwebservice/mobile/flightpathmobile/getClosestAirportList",
+        "description": "This API is returns the Airprots within the provided radius.  The parameters are set to query the calgary downtown area.  \n\nThe parameters is seup for evaluating downtown Calgary. "
+      },
+      "response": []
     },
     {
       "_postman_id": "d9c69cae-dc38-7320-dab1-98b90ba034bb",
