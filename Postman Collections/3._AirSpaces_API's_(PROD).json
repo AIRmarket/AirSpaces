@@ -1,9 +1,7 @@
 {
-  "variables": [],
   "info": {
-    "name": "3. AirSpaces API's (PROD)",
     "_postman_id": "e423f978-1354-a726-7884-4e8a59b2c680",
-    "description": "",
+    "name": "Aviation Data API's",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
   "item": [
@@ -387,8 +385,7 @@
           "mode": "raw",
           "raw": "{\n\n  \"latitude\" : 49.249647,\n  \"longitude\" : -111.79,\n  \"radius\":10000\n}"
         },
-        "url": "https://dev.airmarket.io/leaflet/php_airspace_api/airspaceapi/retrieveQuerylog",
-        "description": ""
+        "url": "https://dev.airmarket.io/leaflet/php_airspace_api/airspaceapi/retrieveQuerylog"
       },
       "response": []
     },
