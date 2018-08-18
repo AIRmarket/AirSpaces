@@ -7,12 +7,6 @@
   },
   "item": [
     {
-      "_postman_id": "af3f9c7e-3af6-774a-a7bb-90d694d4fc26",
-      "name": "AWS DEV - Air Space API",
-      "description": "This can now be removed",
-      "item": []
-    },
-    {
       "_postman_id": "79051dcc-0c16-54db-8865-a10d327ce018",
       "name": "DLB API's",
       "description": "DroneLogbook platform API's for integration with AirMarket purposes. ",
