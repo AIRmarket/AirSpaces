@@ -62,63 +62,63 @@
             "description": "This API is returns the Airprots within the provided radius.  The parameters are set to query the calgary downtown area.  \n\nThe parameters is seup for evaluating downtown Mexico City. "
           },
           "response": []
+        },
+        {
+          "_postman_id": "5e7b0f25-83f8-8570-11f7-a144799f75fb",
+          "name": "getAirSpaceInfo  (Class F for Mexico City) ",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
+                  "",
+                  "tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+                  "",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json, text/javascript, */*"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20160720T232316Z"
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160720/us-east-1/execute-api/aws4_request, SignedHeaders=accept;content-length;content-type;host;x-amz-date, Signature=fd6b7c599d2c2326febcde5c0065f44af4055b54abd7b27eb6005c9fd540b727"
+              },
+              {
+                "key": "Host",
+                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com"
+              },
+              {
+                "key": "Content-Length",
+                "value": "151"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"latitude\": \"19.430232933675224\",\n    \"longitude\": \"-99.11749362945557\",\n    \"altitude\"  : \"700\",\n    \"radius\"    : \".00003\",\n    \"class\"     : \"F\"\n}"
+            },
+            "url": "{{server_url}}/{{sub_path}}airwebservice/mobile/flightpathmobile/getAirSpaceInfo",
+            "description": "This API returns the AirSpace info that intersects with the provided location & radius distance.  \n\nThe parameters is seup for evaluating downtown Mexico City. "
+          },
+          "response": []
         }
       ]
-    },
-    {
-      "_postman_id": "5e7b0f25-83f8-8570-11f7-a144799f75fb",
-      "name": "getAirSpaceInfo  (Class F for Mexico City) ",
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "type": "text/javascript",
-            "exec": [
-              "tests[\"Status code is 200\"] = responseCode.code === 200;",
-              "",
-              "tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
-              "",
-              ""
-            ]
-          }
-        }
-      ],
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          },
-          {
-            "key": "Accept",
-            "value": "application/json, text/javascript, */*"
-          },
-          {
-            "key": "X-Amz-Date",
-            "value": "20160720T232316Z"
-          },
-          {
-            "key": "Authorization",
-            "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160720/us-east-1/execute-api/aws4_request, SignedHeaders=accept;content-length;content-type;host;x-amz-date, Signature=fd6b7c599d2c2326febcde5c0065f44af4055b54abd7b27eb6005c9fd540b727"
-          },
-          {
-            "key": "Host",
-            "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com"
-          },
-          {
-            "key": "Content-Length",
-            "value": "151"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n    \"latitude\": \"19.430232933675224\",\n    \"longitude\": \"-99.11749362945557\",\n    \"altitude\"  : \"700\",\n    \"radius\"    : \".00003\",\n    \"class\"     : \"F\"\n}"
-        },
-        "url": "{{server_url}}/{{sub_path}}airwebservice/mobile/flightpathmobile/getAirSpaceInfo",
-        "description": "This API returns the AirSpace info that intersects with the provided location & radius distance.  \n\nThe parameters is seup for evaluating downtown Mexico City. "
-      },
-      "response": []
     },
     {
       "_postman_id": "664aee68-2046-4d0b-095f-c3b3d511e91f",
