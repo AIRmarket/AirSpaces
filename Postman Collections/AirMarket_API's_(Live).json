@@ -10,27 +10,7 @@
       "_postman_id": "79051dcc-0c16-54db-8865-a10d327ce018",
       "name": "DLB API's",
       "description": "DroneLogbook platform API's for integration with AirMarket purposes. ",
-      "item": [
-        {
-          "_postman_id": "9e810682-01b3-095e-bf3c-6613019de268",
-          "name": "get sfoc",
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\"latitude\":\"49.642867627878076\",\"longitude\":\"-123.66172028006986\",\"altitude\":1033.46,\"radius\":\"300\",\"class\":\"C\",\"useremail\":\"yiyanggis@gmail.com\"}"
-            },
-            "url": "https://dev.airmarket.io/leaflet/airwebservice/mobile/thirdpartyservice/getSFOCInfo/2A130FB6-5787-D4F9-3475-A950E747A0D3/json/"
-          },
-          "response": []
-        }
-      ]
+      "item": []
     }
   ]
 }
