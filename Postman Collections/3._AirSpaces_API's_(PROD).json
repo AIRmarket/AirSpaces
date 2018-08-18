@@ -1,13 +1,13 @@
 {
   "info": {
     "_postman_id": "e423f978-1354-a726-7884-4e8a59b2c680",
-    "name": "Aviation Data",
+    "name": "Aviation Data API's",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
   "item": [
     {
       "_postman_id": "fddd90c2-4063-ec6f-53f7-e70abb61319f",
-      "name": "AADMS Data Tests",
+      "name": "AADMS Data",
       "description": "",
       "item": [
         {
@@ -220,184 +220,162 @@
             "description": "This API is returns the Airprots within the provided radius.  The parameters are set to query the calgary downtown area.  \n\nThe parameters is seup for evaluating downtown Calgary. "
           },
           "response": []
-        },
-        {
-          "_postman_id": "d9c69cae-dc38-7320-dab1-98b90ba034bb",
-          "name": "assessUserLocation (For Calgary)",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Response time is less than 200ms\"] = responseTime < 200;",
-                  "",
-                  "",
-                  "tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Host",
-                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com"
-              },
-              {
-                "key": "X-Amz-Date",
-                "value": "20160804T235515Z"
-              },
-              {
-                "key": "Authorization",
-                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160804/us-west-2/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=85b07897d1cec5faf9c3d63ec46be966b8aad269c63886ab8edcafd0c459caa0"
-              },
-              {
-                "key": "Content-Length",
-                "value": "261"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"time\" : \"Mon, 04 Jan 2016 14:35:01 GMT\",\n  \"username\" : \"joe_test\", \n  \"mission\" : \"mission_march_006\",\n  \"latitude\"  : \"51.069917\",\n  \"longitude\" : \"-114.023059\",\n  \"altitude\" : \"145.0\",\n  \"droneserialnumber\" : \"serial_number_x12345_test\",\n  \"sfoc\":\"true\"\n}"
-            },
-            "url": "{{server_url}}/{{sub_path}}airwebservice/mobile/flightpathmobile/assessUserLocation",
-            "description": "This API performs a Airspace Assessment for the provided location, altitude, username and returns the an Asessment Status with associated Airport & Airspace information. \n\nThe parameters is seup for evaluating downtown Calgary. "
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "480da488-2b29-a1ea-1a99-53ee505dbb4d",
-          "name": "getAirSpaceInfo  (Class C for Calgary)",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
-                  "",
-                  ""
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json, text/javascript, */*"
-              },
-              {
-                "key": "X-Amz-Date",
-                "value": "20160720T232316Z"
-              },
-              {
-                "key": "Authorization",
-                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160720/us-east-1/execute-api/aws4_request, SignedHeaders=accept;content-length;content-type;host;x-amz-date, Signature=fd6b7c599d2c2326febcde5c0065f44af4055b54abd7b27eb6005c9fd540b727"
-              },
-              {
-                "key": "Host",
-                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com"
-              },
-              {
-                "key": "Content-Length",
-                "value": "151"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"latitude\"  : \"51.069917\",\n    \"longitude\" : \"-114.023059\",\n    \"altitude\"  : \"700\",\n    \"radius\"    : \"300\",\n    \"class\"     : \"C\"\n}"
-            },
-            "url": "{{server_url}}/{{sub_path}}airwebservice/mobile/flightpathmobile/getAirSpaceInfo",
-            "description": "This API returns the AirSpace info that intersects with the provided location & radius distance.  \n\nThe parameters is seup for evaluating downtown Calgary. "
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "783b5db8-8363-09d1-95f4-9058c71a37db",
-          "name": "firRegion (For Calgary)",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;",
-                  "",
-                  "tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Host",
-                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com"
-              },
-              {
-                "key": "X-Amz-Date",
-                "value": "20160703T152148Z"
-              },
-              {
-                "key": "Authorization",
-                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160703/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=1516ec388c4c017f55c8a870a556d04b0e2a7c8051704ad0c616b91809a1fb23"
-              },
-              {
-                "key": "Content-Length",
-                "value": "79"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"latitude\"  : \"51.069917\",\n    \"longitude\" : \"-114.023059\"\n}"
-            },
-            "url": "{{server_url}}/{{sub_path}}airwebservice/mobile/flightpathmobile/firRegion",
-            "description": "This API returns the specific Flight Information Region (FIR) associated with the specific location provided. \n\nThe parameters is seup for evaluating downtown Calgary. "
-          },
-          "response": []
         }
-      ],
+      ]
+    },
+    {
+      "_postman_id": "d9c69cae-dc38-7320-dab1-98b90ba034bb",
+      "name": "assessUserLocation (For Calgary)",
       "event": [
-        {
-          "listen": "prerequest",
-          "script": {
-            "id": "814e2bad-eed7-438c-8eb0-609bef3c6b78",
-            "type": "text/javascript",
-            "exec": [
-              ""
-            ]
-          }
-        },
         {
           "listen": "test",
           "script": {
-            "id": "f72979c5-afa9-4a5b-a8b5-13dfd660949d",
             "type": "text/javascript",
             "exec": [
+              "tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+              "",
+              "",
+              "tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Host",
+            "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com"
+          },
+          {
+            "key": "X-Amz-Date",
+            "value": "20160804T235515Z"
+          },
+          {
+            "key": "Authorization",
+            "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160804/us-west-2/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=85b07897d1cec5faf9c3d63ec46be966b8aad269c63886ab8edcafd0c459caa0"
+          },
+          {
+            "key": "Content-Length",
+            "value": "261"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"time\" : \"Mon, 04 Jan 2016 14:35:01 GMT\",\n  \"username\" : \"joe_test\", \n  \"mission\" : \"mission_march_006\",\n  \"latitude\"  : \"51.069917\",\n  \"longitude\" : \"-114.023059\",\n  \"altitude\" : \"145.0\",\n  \"droneserialnumber\" : \"serial_number_x12345_test\",\n  \"sfoc\":\"true\"\n}"
+        },
+        "url": "{{server_url}}/{{sub_path}}airwebservice/mobile/flightpathmobile/assessUserLocation",
+        "description": "This API performs a Airspace Assessment for the provided location, altitude, username and returns the an Asessment Status with associated Airport & Airspace information. \n\nThe parameters is seup for evaluating downtown Calgary. "
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "480da488-2b29-a1ea-1a99-53ee505dbb4d",
+      "name": "getAirSpaceInfo  (Class C for Calgary)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "",
+              "tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");",
+              "",
               ""
             ]
           }
         }
-      ]
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json, text/javascript, */*"
+          },
+          {
+            "key": "X-Amz-Date",
+            "value": "20160720T232316Z"
+          },
+          {
+            "key": "Authorization",
+            "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160720/us-east-1/execute-api/aws4_request, SignedHeaders=accept;content-length;content-type;host;x-amz-date, Signature=fd6b7c599d2c2326febcde5c0065f44af4055b54abd7b27eb6005c9fd540b727"
+          },
+          {
+            "key": "Host",
+            "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com"
+          },
+          {
+            "key": "Content-Length",
+            "value": "151"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"latitude\"  : \"51.069917\",\n    \"longitude\" : \"-114.023059\",\n    \"altitude\"  : \"700\",\n    \"radius\"    : \"300\",\n    \"class\"     : \"C\"\n}"
+        },
+        "url": "{{server_url}}/{{sub_path}}airwebservice/mobile/flightpathmobile/getAirSpaceInfo",
+        "description": "This API returns the AirSpace info that intersects with the provided location & radius distance.  \n\nThe parameters is seup for evaluating downtown Calgary. "
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "783b5db8-8363-09d1-95f4-9058c71a37db",
+      "name": "firRegion (For Calgary)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "",
+              "tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Host",
+            "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com"
+          },
+          {
+            "key": "X-Amz-Date",
+            "value": "20160703T152148Z"
+          },
+          {
+            "key": "Authorization",
+            "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160703/us-east-1/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=1516ec388c4c017f55c8a870a556d04b0e2a7c8051704ad0c616b91809a1fb23"
+          },
+          {
+            "key": "Content-Length",
+            "value": "79"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"latitude\"  : \"51.069917\",\n    \"longitude\" : \"-114.023059\"\n}"
+        },
+        "url": "{{server_url}}/{{sub_path}}airwebservice/mobile/flightpathmobile/firRegion",
+        "description": "This API returns the specific Flight Information Region (FIR) associated with the specific location provided. \n\nThe parameters is seup for evaluating downtown Calgary. "
+      },
+      "response": []
     },
     {
       "_postman_id": "a788e8bb-7e30-954e-a567-f7b1132c3f7b",
