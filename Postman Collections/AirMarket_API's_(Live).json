@@ -5,12 +5,5 @@
     "description": "These are the live API's used by the AirMarket the products on Platform.",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
-  "item": [
-    {
-      "_postman_id": "79051dcc-0c16-54db-8865-a10d327ce018",
-      "name": "DLB API's",
-      "description": "DroneLogbook platform API's for integration with AirMarket purposes. ",
-      "item": []
-    }
-  ]
+  "item": []
 }
