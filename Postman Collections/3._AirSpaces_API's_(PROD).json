@@ -117,58 +117,58 @@
             "description": "This API returns the AirSpace info that intersects with the provided location & radius distance.  \n\nThe parameters is seup for evaluating downtown Mexico City. "
           },
           "response": []
+        },
+        {
+          "_postman_id": "664aee68-2046-4d0b-095f-c3b3d511e91f",
+          "name": "assessUserLocation (For Mexico City)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Response time is less than 200ms\"] = responseTime < 200;",
+                  "",
+                  "",
+                  "tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Host",
+                "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "20160804T235515Z"
+              },
+              {
+                "key": "Authorization",
+                "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160804/us-west-2/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=85b07897d1cec5faf9c3d63ec46be966b8aad269c63886ab8edcafd0c459caa0"
+              },
+              {
+                "key": "Content-Length",
+                "value": "261"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"time\" : \"Mon, 04 Jan 2016 14:35:01 GMT\",\n  \"username\" : \"joe_test\", \n  \"mission\" : \"mission_march_006\",\n  \"latitude\": \"19.430232933675224\",\n  \"longitude\": \"-99.11749362945557\",\n  \"altitude\" : \"145.0\",\n  \"droneserialnumber\" : \"serial_number_x12345_test\",\n  \"sfoc\":\"false\"\n}"
+            },
+            "url": "{{server_url}}/{{sub_path}}airwebservice/mobile/flightpathmobile/assessUserLocation",
+            "description": "This API performs a Airspace Assessment for the provided location, altitude, username and returns the an Asessment Status with associated Airport & Airspace information. \n\nThe parameters is seup for evaluating downtown Mexico Mexico City. "
+          },
+          "response": []
         }
       ]
-    },
-    {
-      "_postman_id": "664aee68-2046-4d0b-095f-c3b3d511e91f",
-      "name": "assessUserLocation (For Mexico City)",
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "type": "text/javascript",
-            "exec": [
-              "tests[\"Response time is less than 200ms\"] = responseTime < 200;",
-              "",
-              "",
-              "tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");"
-            ]
-          }
-        }
-      ],
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          },
-          {
-            "key": "Host",
-            "value": "6mlygjgqw1.execute-api.us-east-1.amazonaws.com"
-          },
-          {
-            "key": "X-Amz-Date",
-            "value": "20160804T235515Z"
-          },
-          {
-            "key": "Authorization",
-            "value": "AWS4-HMAC-SHA256 Credential=AKIAIOO22WMVS55CHHBQ/20160804/us-west-2/execute-api/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=85b07897d1cec5faf9c3d63ec46be966b8aad269c63886ab8edcafd0c459caa0"
-          },
-          {
-            "key": "Content-Length",
-            "value": "261"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"time\" : \"Mon, 04 Jan 2016 14:35:01 GMT\",\n  \"username\" : \"joe_test\", \n  \"mission\" : \"mission_march_006\",\n  \"latitude\": \"19.430232933675224\",\n  \"longitude\": \"-99.11749362945557\",\n  \"altitude\" : \"145.0\",\n  \"droneserialnumber\" : \"serial_number_x12345_test\",\n  \"sfoc\":\"false\"\n}"
-        },
-        "url": "{{server_url}}/{{sub_path}}airwebservice/mobile/flightpathmobile/assessUserLocation",
-        "description": "This API performs a Airspace Assessment for the provided location, altitude, username and returns the an Asessment Status with associated Airport & Airspace information. \n\nThe parameters is seup for evaluating downtown Mexico Mexico City. "
-      },
-      "response": []
     },
     {
       "_postman_id": "580a2ed6-1f35-d661-c322-840ace8fe607",
