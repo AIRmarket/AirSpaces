@@ -7,7 +7,7 @@
   "item": [
     {
       "_postman_id": "fddd90c2-4063-ec6f-53f7-e70abb61319f",
-      "name": "AADMS Data",
+      "name": "AADMS Data Tests",
       "description": "",
       "item": [
         {
@@ -374,6 +374,28 @@
             "description": "This API returns the specific Flight Information Region (FIR) associated with the specific location provided. \n\nThe parameters is seup for evaluating downtown Calgary. "
           },
           "response": []
+        }
+      ],
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "814e2bad-eed7-438c-8eb0-609bef3c6b78",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "f72979c5-afa9-4a5b-a8b5-13dfd660949d",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
         }
       ]
     },
