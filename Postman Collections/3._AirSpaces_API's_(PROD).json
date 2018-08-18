@@ -6,6 +6,12 @@
   },
   "item": [
     {
+      "_postman_id": "fddd90c2-4063-ec6f-53f7-e70abb61319f",
+      "name": "AADMS Data",
+      "description": "",
+      "item": []
+    },
+    {
       "_postman_id": "0c69ac02-2936-be54-ff4a-f747bae7a006",
       "name": "getClosestAirportList (For Mexico City)",
       "event": [
